@@ -10,11 +10,11 @@
 <title>Discover Canada - Citizenship Test</title>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--r:#A82029;--rd:#7A1018;--cr:#FDF6EC;--cd:#F0E6D2;--nv:#1A2744;--w:#FFF;--g:#2E7D32;--gl:#E8F5E9;--e:#C62828;--el:#FFEBEE;--gy:#78716C;--gyl:#E7E5E4;--gd:#C9A84C;--fd:'Crimson Pro',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif}
-.root{font-family:var(--fb);background:var(--cr);color:var(--nv);min-height:100vh;max-width:720px;margin:0 auto}
+:root{--r:#A82029;--rd:#7A1018;--cr:#FDF6EC;--cd:#F0E6D2;--nv:#1A2744;--nl:#2C3E5A;--w:#FFF;--g:#2E7D32;--gl:#E8F5E9;--e:#C62828;--el:#FFEBEE;--gy:#78716C;--gyl:#E7E5E4;--gd:#C9A84C;--fd:'Crimson Pro',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif}
+html{-webkit-text-size-adjust:100%}body{margin:0;padding:0}
+.root{font-family:var(--fb);background:var(--cr);color:var(--nv);min-height:100vh;max-width:720px;margin:0 auto;padding-bottom:env(safe-area-inset-bottom,0)}
 .hero{background:linear-gradient(135deg,var(--r),var(--rd));color:var(--w);padding:44px 24px 36px;text-align:center;position:relative;overflow:hidden;border-radius:0 0 24px 24px}
 .maple-bg{position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M30 5L33 20L45 15L38 25L50 30L38 35L45 45L33 40L30 55L27 40L15 45L22 35L10 30L22 25L15 15L27 20Z' fill='rgba(255,255,255,.04)'/%3E%3C/svg%3E");opacity:.8}
 .hero h1{font-family:var(--fd);font-size:2.5em;font-weight:700;position:relative}
@@ -24,30 +24,23 @@
 .mcard{display:flex;align-items:center;gap:14px;background:var(--w);border:2px solid var(--gyl);border-radius:14px;padding:16px;cursor:pointer;font-family:var(--fb);text-align:left;transition:all .15s}
 .mcard:hover{border-color:var(--r);transform:translateY(-1px);box-shadow:0 4px 16px rgba(168,32,41,.1)}
 .mcard.rev{border-color:var(--gd)}
-.mi{font-size:1.8em;flex-shrink:0}
-.mt{font-weight:700;font-size:.98em;display:block}
-.md{font-size:.76em;color:var(--gy);display:block;margin-top:2px}
+.mi{font-size:1.8em;flex-shrink:0}.mt{font-weight:700;font-size:.98em;display:block}.md{font-size:.76em;color:var(--gy);display:block;margin-top:2px}
 .sbar{display:flex;justify-content:center;gap:28px;padding:14px 16px 20px;border-top:1px solid var(--gyl);margin:0 16px}
-.st{text-align:center;display:flex;flex-direction:column;gap:1px}
-.sn{font-weight:700;font-size:1.2em;color:var(--r)}
-.sl{font-size:.68em;color:var(--gy);text-transform:uppercase;letter-spacing:.05em}
+.st{text-align:center;display:flex;flex-direction:column;gap:1px}.sn{font-weight:700;font-size:1.2em;color:var(--r)}.sl{font-size:.68em;color:var(--gy);text-transform:uppercase;letter-spacing:.05em}
 .picker,.revision{padding:16px}
 .picker h2,.revision h2{font-family:var(--fd);font-size:1.5em;margin:10px 0 14px}
 .diff-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
 .dbtn{padding:6px 14px;border-radius:20px;border:2px solid var(--gyl);background:transparent;font-family:var(--fb);font-size:.78em;font-weight:600;cursor:pointer;transition:all .15s}
-.dbtn.active{color:var(--w)!important;background:var(--nv);border-color:var(--nv)}
+.dbtn.active{color:var(--w)!important;background:var(--nv)!important;border-color:var(--nv)!important}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cc{background:var(--w);border:2px solid var(--gyl);border-radius:12px;padding:16px 12px;font-family:var(--fb);font-size:.85em;font-weight:600;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:3px;transition:all .15s}
-.cc:hover{border-color:var(--r)}
-.cc.all{grid-column:1/-1;background:var(--nv);color:var(--w);border-color:var(--nv)}
-.cn{font-size:1.5em;font-weight:700;color:var(--r)}.cc.all .cn{color:var(--gd)}
-.ci{font-size:1.3em}
+.cc:hover{border-color:var(--r)}.cc.all{grid-column:1/-1;background:var(--nv);color:var(--w);border-color:var(--nv)}
+.cn{font-size:1.5em;font-weight:700;color:var(--r)}.cc.all .cn{color:var(--gd)}.ci{font-size:1.3em}
 .back{background:none;border:none;font-family:var(--fb);font-size:.88em;color:var(--gy);cursor:pointer;padding:4px 0}.back:hover{color:var(--nv)}
 .sections{display:flex;flex-direction:column;gap:8px}
 .sec{background:var(--w);border-radius:12px;overflow:hidden;border:1px solid var(--gyl)}
 .sec-head{width:100%;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;border:none;background:none;font-family:var(--fb);font-size:.92em;font-weight:600;cursor:pointer;color:var(--nv)}
-.sec.open .sec-head{background:var(--cd)}
-.chev{font-size:.7em;color:var(--gy)}
+.sec.open .sec-head{background:var(--cd)}.chev{font-size:.7em;color:var(--gy)}
 .sec-body{padding:14px 16px;font-size:.88em;line-height:1.65;color:#44403C;border-top:1px solid var(--gyl)}
 .quiz{display:flex;flex-direction:column;min-height:100vh}
 .qh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 6px;gap:10px}
@@ -63,26 +56,20 @@
 .qt{font-family:var(--fd);font-size:1.28em;font-weight:600;line-height:1.4;margin-bottom:18px}
 .opts{display:flex;flex-direction:column;gap:9px}
 .opt{display:flex;align-items:flex-start;gap:11px;background:var(--w);border:2px solid var(--gyl);border-radius:11px;padding:13px 14px;cursor:pointer;font-family:var(--fb);font-size:.9em;line-height:1.45;transition:all .15s;text-align:left;width:100%}
-.opt:hover{border-color:#2C3E5A}
-.opt.sel{border-color:var(--nv);background:#EEF0F4}
-.opt.ok{border-color:var(--g);background:var(--gl)}
-.opt.no{border-color:var(--e);background:var(--el)}
+.opt:hover{border-color:#2C3E5A}.opt.sel{border-color:var(--nv);background:#EEF0F4}
+.opt.ok{border-color:var(--g);background:var(--gl)}.opt.no{border-color:var(--e);background:var(--el)}
 .ol{display:flex;align-items:center;justify-content:center;min-width:26px;height:26px;border-radius:50%;background:var(--cd);font-weight:700;font-size:.8em;flex-shrink:0}
-.opt.sel .ol{background:var(--nv);color:var(--w)}
-.opt.ok .ol{background:var(--g);color:var(--w)}
-.opt.no .ol{background:var(--e);color:var(--w)}
+.opt.sel .ol{background:var(--nv);color:var(--w)}.opt.ok .ol{background:var(--g);color:var(--w)}.opt.no .ol{background:var(--e);color:var(--w)}
 .ot{padding-top:2px}
 .expl{margin-top:14px;padding:10px 14px;background:var(--gl);border-radius:10px;color:var(--g);font-weight:600;font-size:.85em}
 .qf{display:flex;justify-content:space-between;padding:14px 16px 22px;gap:10px;border-top:1px solid var(--gyl);background:var(--cr)}
 .nb{padding:11px 22px;border-radius:10px;border:2px solid var(--gyl);background:var(--w);font-family:var(--fb);font-weight:600;font-size:.88em;cursor:pointer;transition:all .15s}
-.nb:disabled{opacity:.35;cursor:not-allowed}
-.nb.nx,.nb.fin{background:var(--r);color:var(--w);border-color:var(--r)}
+.nb:disabled{opacity:.35;cursor:not-allowed}.nb.nx,.nb.fin{background:var(--r);color:var(--w);border-color:var(--r)}
 .res{padding:0 0 36px}
 .rh{text-align:center;padding:44px 20px 32px;border-radius:0 0 24px 24px}
 .rh.pass{background:linear-gradient(135deg,#2E7D32,#1B5E20);color:var(--w)}
 .rh.fail{background:linear-gradient(135deg,var(--r),var(--rd));color:var(--w)}
-.rs{font-family:var(--fd);font-size:3.6em;font-weight:700}
-.rv{font-size:1.2em;font-weight:700;letter-spacing:.08em;margin-top:2px}
+.rs{font-family:var(--fd);font-size:3.6em;font-weight:700}.rv{font-size:1.2em;font-weight:700;letter-spacing:.08em;margin-top:2px}
 .rd{font-size:.85em;opacity:.8;margin-top:6px}
 .cb{padding:20px 16px 0}.cb h3,.rr h3{font-family:var(--fd);font-size:1.15em;margin-bottom:12px}
 .cr{display:flex;align-items:center;gap:8px;margin-bottom:9px}
@@ -100,327 +87,374 @@
 .ra{display:flex;gap:10px;padding:20px 16px}
 .ab{flex:1;padding:13px;border-radius:12px;border:none;font-family:var(--fb);font-weight:700;font-size:.93em;cursor:pointer;background:var(--r);color:var(--w);transition:opacity .15s}
 .ab:hover{opacity:.9}.ab.sec{background:var(--w);color:var(--nv);border:2px solid var(--gyl)}
-  
-html{-webkit-text-size-adjust:100%}
-body{margin:0;padding:0}
-.root{padding-bottom:env(safe-area-inset-bottom,0)}
-/* Fix: difficulty buttons need visible active state for "All Levels" */
-.dbtn.active{color:var(--w)!important;background:var(--nv)!important;border-color:var(--nv)!important}
 </style>
 </head>
 <body>
 <div id="app" class="root"></div>
 <script>
-
-// ═══ DATA ═══
-const SUMMARIES=[{topic:"Rights & Responsibilities",icon:"\u2696\ufe0f",sections:[{title:"Sources of Canadian Law",text:"Canadian law comes from laws passed by Parliament and provincial legislatures, English common law, the civil code of France, and the unwritten constitution inherited from Great Britain. Together these secure an 800-year tradition of ordered liberty dating back to Magna Carta (1215)."},{title:"Fundamental Freedoms",text:"Freedom of conscience and religion; freedom of thought, belief, opinion and expression (including speech and press); freedom of peaceful assembly; and freedom of association."},{title:"Charter Rights (1982)",text:"The Canadian Charter of Rights and Freedoms was entrenched in the Constitution in 1982. Key rights include: Mobility Rights (live/work anywhere in Canada), Aboriginal Peoples\u2019 Rights, Official Language Rights (French and English equal in Parliament/government), and Multiculturalism."},{title:"Citizenship Responsibilities",text:"Obeying the law, taking responsibility for oneself and family, serving on a jury, voting in elections, helping others in the community, and protecting Canada\u2019s heritage and environment."},{title:"Equality & Defending Canada",text:"Men and women are equal under the law. There is no compulsory military service, but serving in the Canadian Forces (navy, army, air force) is a noble way to contribute."},{title:"Habeas Corpus",text:"The right to challenge unlawful detention by the state. This comes from English common law."}]},{topic:"Who We Are",icon:"\ud83c\udf41",sections:[{title:"Three Founding Peoples",text:"Aboriginal, French, and British. Canada is the only constitutional monarchy in North America, built on Peace, Order and Good Government."},{title:"Aboriginal Peoples",text:"Three distinct groups: First Nations (about 65%, ~600 communities), M\u00e9tis (mixed Aboriginal and European, Prairie provinces, speak Michif), and Inuit (\u2018the people\u2019 in Inuktitut, across the Arctic). Royal Proclamation of 1763 first guaranteed territorial rights."},{title:"Residential Schools",text:"From the 1800s to 1980s, federal government placed Aboriginal children in residential schools. Languages and cultural practices prohibited. Ottawa apologized in 2008."},{title:"English and French",text:"18M Anglophones, 7M Francophones. New Brunswick is the only officially bilingual province. Acadians settled in the Maritimes starting in 1604."},{title:"Diversity",text:"Largest groups: English, French, Scottish, Irish, German, Italian, Chinese, Aboriginal, Ukrainian, Dutch, South Asian, Scandinavian. Since 1970s, most immigrants from Asian countries. Largest religion: Catholic."}]},{topic:"Canada's History",icon:"\ud83d\udcdc",sections:[{title:"First Europeans",text:"Vikings reached Newfoundland ~1,000 years ago (L\u2019Anse aux Meadows). John Cabot mapped East Coast 1497. Jacques Cartier explored St. Lawrence (1534-1542), heard \u2018kanata\u2019 (village)."},{title:"New France",text:"First settlement 1604. Champlain built Quebec City 1608. Fur trade economy. Leaders: Jean Talon, Bishop Laval, Count Frontenac."},{title:"British Conquest & Quebec Act",text:"1759: British defeated French at Plains of Abraham. Quebec Act 1774: religious freedom for Catholics, restored French civil law."},{title:"United Empire Loyalists",text:"After 1776, 40,000+ Loyalists fled American Revolution to Canada. Joseph Brant led Mohawk Indians. ~3,000 black Loyalists came north."},{title:"Democracy & Responsible Government",text:"First assembly: Halifax 1758. Constitutional Act 1791 created Upper/Lower Canada. Responsible government: Nova Scotia 1847-48, Canadas 1848-49. La Fontaine first leader."},{title:"Confederation (1867)",text:"BNA Act created Dominion of Canada July 1, 1867: ON, QC, NS, NB. Sir John A. Macdonald first PM. Cartier key architect from Quebec."},{title:"Expansion",text:"MB (1870), BC (1871), PEI (1873), AB & SK (1905), NL (1949), Nunavut (1999). CPR completed 1885."},{title:"War of 1812",text:"US invaded 1812. Key: Isaac Brock, Tecumseh, Laura Secord, de Salaberry. Invasion failed by 1814. Ensured Canada\u2019s independence from US."},{title:"World Wars",text:"WWI: 600,000 served, 60,000 killed. Vimy Ridge Apr 1917. WWII: 1M+ served, 44,000 killed. D-Day Jun 6, 1944 at Juno Beach."},{title:"Abolition of Slavery",text:"1793: Upper Canada first to move toward abolition. 1807: Parliament banned slave trade. 1833: abolished throughout Empire. Underground Railroad."}]},{topic:"Modern Canada",icon:"\ud83c\udfd9\ufe0f",sections:[{title:"Post-War Prosperity",text:"Oil in Alberta 1947. NATO and NORAD. Korean War: 500 dead, 1,000 wounded."},{title:"Social Programs",text:"Canada Health Act. Employment insurance (1940). Old Age Security (1927). CPP/QPP (1965). Public education by provinces."},{title:"Quebec & Bilingualism",text:"Quiet Revolution (1960s). Official Languages Act (1969). Sovereignty referendums defeated 1980, 1995. La Francophonie 1970."},{title:"Achievements",text:"Telephone (Bell), snowmobile (Bombardier), time zones (Fleming), insulin (Banting & Best), Canadarm, BlackBerry. Group of Seven (1920)."},{title:"Voting Rights",text:"Manitoba first province for women (1916). Federal vote 1917-18. Agnes Macphail first woman MP (1921). Aboriginal vote 1960."}]},{topic:"Government",icon:"\ud83c\udfdb\ufe0f",sections:[{title:"Three Key Facts",text:"Federal state, parliamentary democracy, constitutional monarchy."},{title:"Federal Responsibilities",text:"Defence, foreign policy, trade, currency, criminal law, citizenship. Shared: agriculture, immigration."},{title:"Provincial Responsibilities",text:"Municipal government, education, health, natural resources, property/civil rights, highways."},{title:"Parliament",text:"Sovereign + Senate (appointed, until 75) + House of Commons (elected). Bills need both chambers + Royal Assent."},{title:"How a Bill Becomes Law",text:"1st Reading \u2192 2nd Reading \u2192 Committee \u2192 Report Stage \u2192 3rd Reading \u2192 Senate \u2192 Royal Assent."},{title:"Constitutional Monarchy",text:"Head of State: Sovereign (GG federally, Lt. Governors provincially). Head of Government: PM (Premier provincially). Territories: Commissioners."}]},{topic:"Federal Elections",icon:"\ud83d\uddf3\ufe0f",sections:[{title:"How Elections Work",text:"Every 4 years, 3rd Monday October. 308 ridings. Each elects 1 MP. Most votes wins."},{title:"Who Can Vote",text:"Citizens 18+, on voters\u2019 list. Elections Canada manages National Register of Electors."},{title:"Secret Ballot",text:"No one can insist you reveal your vote."},{title:"Government Formation",text:"Most seats = government. Majority = 50%+ seats. Minority = less than 50%."},{title:"Cabinet",text:"PM picks ministers from MPs. Cabinet runs departments, prepares budget. Must keep confidence of House."}]},{topic:"Justice System",icon:"\u2696\ufe0f",sections:[{title:"Principles",text:"Presumption of innocence. Due process. Rule of law applies to everyone."},{title:"Courts",text:"Supreme Court (highest). Federal Court. Provincial: appeal, trial, family, traffic, small claims."},{title:"Police",text:"RCMP enforces federal laws, provincial police except ON and QC. You can question police conduct."}]},{topic:"Canadian Symbols",icon:"\ud83c\udde8\ud83c\udde6",sections:[{title:"Crown & Flag",text:"Crown: state symbol 400+ years. Flag: maple leaf 1965. Red/white since 1921 (George V). Union Jack is Royal Flag."},{title:"Key Symbols",text:"Maple leaf (since 1700s). Beaver. Fleur-de-lys (Quebec). Motto: A mari usque ad mare (from sea to sea)."},{title:"Sports",text:"Hockey: winter sport. Lacrosse: summer. Basketball: Naismith 1891. Stanley Cup 1892. Grey Cup 1909."},{title:"Important Dates",text:"Macdonald Day Jan 11. Vimy Day Apr 9. Victoria Day Mon before May 25. Canada Day Jul 1. Labour Day 1st Mon Sep. Thanksgiving 2nd Mon Oct. Remembrance Day Nov 11."},{title:"Honours",text:"Victoria Cross: highest honour. Order of Canada: started 1967."}]},{topic:"Economy",icon:"\ud83d\udcb0",sections:[{title:"Industries",text:"Service (75%+ workers). Manufacturing. Natural resources (forestry, fishing, agriculture, mining, energy)."},{title:"Trade",text:"Largest partner: US. NAFTA 1994. G8 member. 75%+ exports to US."}]},{topic:"Regions & Geography",icon:"\ud83d\uddfa\ufe0f",sections:[{title:"Overview",text:"2nd largest country (10M km\u00b2). 3 oceans: Pacific, Atlantic, Arctic. 10 provinces, 3 territories. ~34M people. Capital: Ottawa (1857, Queen Victoria)."},{title:"Atlantic",text:"NL (St. John\u2019s, offshore oil). PEI (Charlottetown, smallest, Confederation birthplace). NS (Halifax, naval base, Bay of Fundy). NB (Fredericton, only bilingual province)."},{title:"Central",text:"Quebec (Quebec City, largest hydro producer). Ontario (Toronto, largest city, financial centre, Great Lakes)."},{title:"Prairie",text:"Manitoba (Winnipeg). Saskatchewan (Regina, RCMP academy, 40% arable land). Alberta (Edmonton, oil/gas, Banff 1885)."},{title:"West & North",text:"BC (Victoria, Vancouver port, forestry). Yukon (Whitehorse, Gold Rush, Mt Logan, -63\u00b0C). NWT (Yellowknife, diamonds). Nunavut (Iqaluit, 85% Inuit, \u2018our land\u2019)."}]}];
-
-const QUESTIONS=[
-{id:1,cat:"Rights & Responsibilities",d:1,q:"What are three responsibilities of citizenship?",o:["Being loyal to Canada, recycling newspapers, serving in the navy","Obeying the law, taking responsibility for oneself and one\u2019s family, serving on a jury","Learning both official languages, voting in elections, belonging to a union","Buying Canadian products, owning your own business, using less water"],a:1},
-{id:2,cat:"Rights & Responsibilities",d:1,q:"Are men and women equal under the law in Canada?",o:["Yes","No","Only in certain provinces","Only for citizens"],a:0},
-{id:3,cat:"Rights & Responsibilities",d:2,q:"What is habeas corpus?",o:["The right to a fair trial","The right to challenge unlawful detention by the state","The right to vote","The right to own property"],a:1},
-{id:4,cat:"Rights & Responsibilities",d:2,q:"When was the Charter of Rights and Freedoms entrenched?",o:["1867","1947","1982","1999"],a:2},
-{id:5,cat:"Rights & Responsibilities",d:2,q:"Name four fundamental freedoms Canadians enjoy.",o:["Speech, religion, press, assembly","Conscience/religion; thought/expression; peaceful assembly; association","Travel, work, vote, own land","Movement, privacy, commerce, education"],a:1},
-{id:6,cat:"Rights & Responsibilities",d:2,q:"What does Mobility Rights mean?",o:["Drive anywhere without a license","Live and work anywhere in Canada, apply for a passport","Travel internationally without restrictions","Must live where born"],a:1},
-{id:7,cat:"Rights & Responsibilities",d:1,q:"What justice responsibility do citizens have?",o:["Becoming a lawyer","Serving on a jury when called","Reporting all crimes","Attending court yearly"],a:1},
-{id:8,cat:"Rights & Responsibilities",d:3,q:"The Magna Carta was signed in what year?",o:["1066","1215","1497","1763"],a:1},
-{id:9,cat:"Rights & Responsibilities",d:3,q:"The Charter begins recognizing the supremacy of what?",o:["Parliament and the Crown","God and the rule of law","English and French","The people and democracy"],a:1},
-{id:10,cat:"Rights & Responsibilities",d:1,q:"Is there compulsory military service in Canada?",o:["Yes, for all over 18","Yes, in wartime only","No","Only for men"],a:2},
-{id:11,cat:"Rights & Responsibilities",d:2,q:"Name two key documents containing our rights.",o:["Citizenship Act and Immigration Act","Magna Carta and Charter of Rights and Freedoms","Constitution Act and Official Languages Act","BNA Act and Quebec Act"],a:1},
-{id:12,cat:"Who We Are",d:1,q:"Who are the three founding peoples?",o:["English, French, American","Aboriginal, French, British","Inuit, M\u00e9tis, First Nations","Scottish, Irish, Welsh"],a:1},
-{id:13,cat:"Who We Are",d:1,q:"What does \u2018Inuit\u2019 mean?",o:["The warriors","The hunters","The people","The northerners"],a:2},
-{id:14,cat:"Who We Are",d:2,q:"Who are the M\u00e9tis?",o:["Aboriginal people of the Arctic","Distinct people of mixed Aboriginal and European ancestry","French Canadians from Quebec","British settlers"],a:1},
-{id:15,cat:"Who We Are",d:2,q:"What percentage of Aboriginal people are First Nations?",o:["About 30%","About 50%","About 65%","About 80%"],a:2},
-{id:16,cat:"Who We Are",d:1,q:"Which is the only officially bilingual province?",o:["Quebec","Ontario","New Brunswick","Manitoba"],a:2},
-{id:17,cat:"Who We Are",d:2,q:"Who are the Acadians?",o:["French colonists in the Maritimes since 1604","British settlers in Nova Scotia","Aboriginal peoples of Atlantic Canada","American Loyalists"],a:0},
-{id:18,cat:"Who We Are",d:3,q:"The Acadians\u2019 deportation is known as what?",o:["Quiet Revolution","Great Upheaval","Trail of Tears","Expulsion Act"],a:1},
-{id:19,cat:"Who We Are",d:2,q:"How many Anglophones and Francophones?",o:["10M and 3M","18M and 7M","25M and 10M","15M and 5M"],a:1},
-{id:20,cat:"Who We Are",d:3,q:"In 2006, the Quebecois were recognized as what?",o:["Independent state","Nation within a united Canada","Distinct society","Founding people"],a:1},
-{id:21,cat:"Who We Are",d:1,q:"Largest religious affiliation in Canada?",o:["Protestant","Catholic","Muslim","No religion"],a:1},
-{id:22,cat:"Who We Are",d:3,q:"When did Ottawa apologize for residential schools?",o:["1995","2000","2008","2012"],a:2},
-{id:23,cat:"Who We Are",d:2,q:"What language do the M\u00e9tis speak?",o:["Inuktitut","Cree","Michif","Dene"],a:2},
-{id:24,cat:"Canada's History",d:1,q:"Who first explored the St. Lawrence River?",o:["Cabot","Champlain","Jacques Cartier","Pierre de Monts"],a:2},
-{id:25,cat:"Canada's History",d:1,q:"Where does the name \u2018Canada\u2019 come from?",o:["French for great land","Iroquoian \u2018kanata\u2019 meaning village","Aboriginal for meeting place","British term"],a:1},
-{id:26,cat:"Canada's History",d:2,q:"What did the CPR symbolize?",o:["Defeat of Americans","Unity connecting Canada sea to sea","Start of fur trade","Immigration begins"],a:1},
-{id:27,cat:"Canada's History",d:1,q:"When was Confederation?",o:["July 4, 1776","July 1, 1867","January 1, 1901","July 1, 1982"],a:1},
-{id:28,cat:"Canada's History",d:1,q:"Who was Canada\u2019s first PM?",o:["Laurier","Cartier","John Alexander Macdonald","La Fontaine"],a:2},
-{id:29,cat:"Canada's History",d:2,q:"Who was La Fontaine?",o:["First PM","First leader of responsible government, French language champion","RCMP founder","Governor of New France"],a:1},
-{id:30,cat:"Canada's History",d:2,q:"Significance of Vimy Ridge?",o:["Ended War of 1812","Major Canadian victory April 1917 in WWI","First WWII battle","Independence from Britain"],a:1},
-{id:31,cat:"Canada's History",d:2,q:"Plains of Abraham 1759?",o:["French defeated British","British defeated French, ending France\u2019s American empire","Canada independence","Americans invaded"],a:1},
-{id:32,cat:"Canada's History",d:2,q:"Who were the United Empire Loyalists?",o:["French settlers","Crown loyalists who fled American Revolution to Canada","Aboriginal allies","War of 1812 soldiers"],a:1},
-{id:33,cat:"Canada's History",d:3,q:"When did Upper Canada move toward abolishing slavery?",o:["1763","1793","1833","1867"],a:1},
-{id:34,cat:"Canada's History",d:2,q:"War of 1812 is remembered for?",o:["Defeating Napoleon","Ensuring Canada\u2019s independence from the US","Beginning Confederation","Yukon Gold Rush"],a:1},
-{id:35,cat:"Canada's History",d:3,q:"Key Confederation architect from Quebec?",o:["Macdonald","George-\u00c9tienne Cartier","Laurier","Riel"],a:1},
-{id:36,cat:"Canada's History",d:3,q:"What was the Quebec Act of 1774?",o:["Made Quebec independent","Catholic freedom and French civil law restored","Forced English on French","Trade agreement"],a:1},
-{id:37,cat:"Canada's History",d:2,q:"Who led Loyalist Mohawks into Canada?",o:["Tecumseh","Joseph Brant","Riel","Dumont"],a:1},
-{id:38,cat:"Canada's History",d:2,q:"Father of Manitoba, M\u00e9tis rights defender?",o:["Macdonald","Dumont","Louis Riel","Sam Steele"],a:2},
-{id:39,cat:"Canada's History",d:3,q:"First elected assembly in Canada?",o:["1758 Halifax","1773 Charlottetown","1791 Quebec City","1867 Ottawa"],a:0},
-{id:40,cat:"Canada's History",d:1,q:"BNA Act is also known as?",o:["Quebec Act","Constitution Act, 1867","Charter of Rights","Statute of Westminster"],a:1},
-{id:41,cat:"Canada's History",d:3,q:"Who suggested \u2018Dominion of Canada\u2019?",o:["Macdonald","Sir Leonard Tilley","Cartier","Laurier"],a:1},
-{id:42,cat:"Canada's History",d:2,q:"Original four provinces?",o:["ON, QC, MB, BC","ON, QC, NS, NB","ON, QC, PEI, NS","All 10"],a:1},
-{id:43,cat:"Canada's History",d:3,q:"First French-Canadian PM?",o:["Cartier","La Fontaine","Sir Wilfrid Laurier","Pierre Trudeau"],a:2},
-{id:44,cat:"Canada's History",d:2,q:"Laura Secord was known for?",o:["First woman MP","Warning of American attack in War of 1812","Founding a hospital","Writing anthem"],a:1},
-{id:45,cat:"Canada's History",d:2,q:"CPR last spike driven when?",o:["1867","1871","1885","1900"],a:2},
-{id:46,cat:"Canada's History",d:3,q:"Royal Proclamation of 1763 issued by?",o:["Queen Victoria","King George III","King George V","Queen Elizabeth II"],a:1},
-{id:47,cat:"Canada's History",d:1,q:"What was D-Day (June 6, 1944)?",o:["End of WWI","Allied invasion of Normandy, Canadians at Juno Beach","Start of Korean War","Independence"],a:1},
-{id:48,cat:"Canada's History",d:3,q:"How many served in WWI?",o:["100,000","300,000","600,000","1 million"],a:2},
-{id:49,cat:"Canada's History",d:3,q:"How many killed in WWI?",o:["10,000","30,000","60,000","100,000"],a:2},
-{id:50,cat:"Modern Canada",d:2,q:"Oil discovered in Alberta when?",o:["1920","1935","1947","1960"],a:2},
-{id:51,cat:"Modern Canada",d:2,q:"Official Languages Act (1969)?",o:["All must speak both","Guarantees French/English federal services","French only in Quebec","Aboriginal languages official"],a:1},
-{id:52,cat:"Modern Canada",d:2,q:"Cold War military alliance Canada joined?",o:["UN only","NATO","Warsaw Pact","EU"],a:1},
-{id:53,cat:"Modern Canada",d:2,q:"What is the Quiet Revolution?",o:["Rapid change in Quebec 1960s","Peaceful Confederation transition","1970s multiculturalism","Charter creation"],a:0},
-{id:54,cat:"Modern Canada",d:1,q:"Who invented basketball?",o:["Gretzky","Terry Fox","James Naismith","Bell"],a:2},
-{id:55,cat:"Modern Canada",d:1,q:"Terry Fox is famous for?",o:["Olympic gold","Marathon of Hope for cancer research","Inventing Canadarm","First astronaut"],a:1},
-{id:56,cat:"Modern Canada",d:3,q:"Bank of Canada created when?",o:["1867","1920","1934","1945"],a:2},
-{id:57,cat:"Modern Canada",d:2,q:"Manitoba women first got provincial vote?",o:["1900","1916","1921","1940"],a:1},
-{id:58,cat:"Modern Canada",d:3,q:"Agnes Macphail was?",o:["First female PM","First woman MP (1921)","First female SCC justice","First female GG"],a:1},
-{id:59,cat:"Modern Canada",d:2,q:"Aboriginal people gained federal vote when?",o:["1918","1940","1960","1982"],a:2},
-{id:60,cat:"Modern Canada",d:3,q:"What is NORAD?",o:["Free Trade Agreement","NATO","North American Aerospace Defence Command","Aboriginal Rights Org"],a:2},
-{id:61,cat:"Modern Canada",d:2,q:"Who discovered insulin?",o:["Bell","Banting and Best","Penfield","Hopps"],a:1},
-{id:62,cat:"Modern Canada",d:2,q:"Who invented the snowmobile?",o:["Fleming","Bombardier","Bell","Fessenden"],a:1},
-{id:63,cat:"Modern Canada",d:3,q:"Who invented standard time zones?",o:["Sir Sandford Fleming","Bell","Bombardier","Evans"],a:0},
-{id:64,cat:"Government",d:1,q:"Three key facts about Canada\u2019s government?",o:["Republic, democracy, federation","Federal state, parliamentary democracy, constitutional monarchy","Monarchy, senate, legislature","Federal, provincial, municipal"],a:1},
-{id:65,cat:"Government",d:2,q:"Constitutional monarchy means?",o:["Queen makes all laws","Head of State is hereditary Sovereign per Constitution","PM is monarch","No written constitution"],a:1},
-{id:66,cat:"Government",d:1,q:"Three branches of government?",o:["Federal, provincial, municipal","Executive, Legislative, Judicial","Senate, House, Supreme Court","PM, Cabinet, Parliament"],a:1},
-{id:67,cat:"Government",d:1,q:"Head of state vs head of government?",o:["Sovereign=state; PM=government","PM=state; Sovereign=government","Equal power","GG is both"],a:0},
-{id:68,cat:"Government",d:1,q:"Three levels of government?",o:["Executive, legislative, judicial","Federal, provincial/territorial, municipal","Senate, House, Crown","PM, Premier, Mayor"],a:1},
-{id:69,cat:"Government",d:2,q:"Three parts of Parliament?",o:["PM, Cabinet, Senate","Sovereign, Senate, House of Commons","House, Senate, Supreme Court","GG, PM, Cabinet"],a:1},
-{id:70,cat:"Government",d:2,q:"How are Senators chosen?",o:["Elected","Appointed by GG on PM\u2019s advice","Chosen by premiers","Selected by SCC"],a:1},
-{id:71,cat:"Government",d:3,q:"Senators serve until age?",o:["65","70","75","80"],a:2},
-{id:72,cat:"Government",d:2,q:"Before a bill becomes law?",o:["PM signs it","Pass House + Senate, Royal Assent","SCC approves","House only"],a:1},
-{id:73,cat:"Government",d:3,q:"Government loses confidence vote?",o:["Nothing","Must resign","SCC intervenes","Referendum"],a:1},
-{id:74,cat:"Government",d:2,q:"Sovereign\u2019s representative in provinces?",o:["Premier","Lieutenant Governor","Commissioner","Senator"],a:1},
-{id:75,cat:"Federal Elections",d:1,q:"How are MPs chosen?",o:["UN appoints","Premiers choose","Elected by voters in their riding","Landowners elect"],a:2},
-{id:76,cat:"Federal Elections",d:1,q:"Who can vote federally?",o:["Anyone in Canada","Citizens 18+ on voting day","PRs over 16","Property owners"],a:1},
-{id:77,cat:"Federal Elections",d:1,q:"Is your vote secret?",o:["No","Yes, by law","Only from employers","Only federally"],a:1},
-{id:78,cat:"Federal Elections",d:2,q:"Which party forms government?",o:["Most votes total","GG selects","Most seats in House","Senate winner"],a:2},
-{id:79,cat:"Federal Elections",d:2,q:"Majority government means?",o:["50%+ seats in House","Half voted for them","All provinces support","Senate agrees"],a:0},
-{id:80,cat:"Federal Elections",d:2,q:"How many electoral districts?",o:["200","250","308","350"],a:2},
-{id:81,cat:"Federal Elections",d:2,q:"Official Opposition is?",o:["Party that lost","Opposition party with most seats","Any disagreeing party","The Senate"],a:1},
-{id:82,cat:"Federal Elections",d:1,q:"How to mark your ballot?",o:["Write name","Mark X next to candidate","Circle name","Stamp it"],a:1},
-{id:83,cat:"Justice System",d:1,q:"Presumption of innocence means?",o:["Must prove innocence first","Innocent until proven guilty","Only citizens","Police decide"],a:1},
-{id:84,cat:"Justice System",d:1,q:"Highest court in Canada?",o:["Federal Court","Queen\u2019s Bench","Supreme Court of Canada","Provincial Supreme Court"],a:2},
-{id:85,cat:"Justice System",d:2,q:"Can you question police conduct?",o:["No","Yes, complaints process exists","Only via lawyer","Only citizens"],a:1},
-{id:86,cat:"Justice System",d:2,q:"What is due process?",o:["Speedy trial","Government must respect all legal rights","Passing a law","Election process"],a:1},
-{id:87,cat:"Justice System",d:2,q:"Who enforces federal laws?",o:["Provincial police","Municipal police","The RCMP","Canadian Forces"],a:2},
-{id:88,cat:"Justice System",d:3,q:"Which provinces have own provincial police?",o:["AB and BC","Ontario and Quebec","MB and SK","NS and NB"],a:1},
-{id:89,cat:"Canadian Symbols",d:1,q:"Remembrance Day poppy represents?",o:["Sovereign","Confederation","Dead PMs","Canadians who served or died in wars"],a:3},
-{id:90,cat:"Canadian Symbols",d:1,q:"When is Canada Day?",o:["Jan 1","Jul 1","Jul 4","Nov 11"],a:1},
-{id:91,cat:"Canadian Symbols",d:1,q:"National winter sport?",o:["Skiing","Ice hockey","Curling","Snowboarding"],a:1},
-{id:92,cat:"Canadian Symbols",d:1,q:"Official summer sport?",o:["Soccer","Baseball","Lacrosse","Cricket"],a:2},
-{id:93,cat:"Canadian Symbols",d:2,q:"Highest honour for Canadians?",o:["Order of Canada","Victoria Cross","GG Award","Medal of Bravery"],a:1},
-{id:94,cat:"Canadian Symbols",d:1,q:"Current flag first raised?",o:["1867","1921","1965","1982"],a:2},
-{id:95,cat:"Canadian Symbols",d:2,q:"Official animal symbol?",o:["Moose","Beaver","Polar bear","Loon"],a:1},
-{id:96,cat:"Canadian Symbols",d:2,q:"National motto?",o:["Peace, Order, Good Government","A mari usque ad mare (From sea to sea)","Strong and Free","In God We Trust"],a:1},
-{id:97,cat:"Canadian Symbols",d:2,q:"When is Remembrance Day?",o:["Oct 31","Nov 1","Nov 11","Dec 25"],a:2},
-{id:98,cat:"Canadian Symbols",d:2,q:"When is Vimy Day?",o:["April 9","May 25","July 1","Nov 11"],a:0},
-{id:99,cat:"Canadian Symbols",d:3,q:"O Canada proclaimed anthem when?",o:["1867","1880","1965","1980"],a:3},
-{id:100,cat:"Canadian Symbols",d:3,q:"O Canada first sung where?",o:["Ottawa","Montreal","Quebec City","Toronto"],a:2},
-{id:101,cat:"Canadian Symbols",d:3,q:"Who donated the Stanley Cup?",o:["Queen Victoria","Lord Stanley, GG, 1892","Macdonald","Lord Grey"],a:1},
-{id:102,cat:"Canadian Symbols",d:3,q:"Who donated the Grey Cup?",o:["Lord Stanley","Lord Grey, GG, 1909","Laurier","Queen Elizabeth"],a:1},
-{id:103,cat:"Canadian Symbols",d:2,q:"What is the fleur-de-lys?",o:["National flower","French royalty symbol 1000+ years, Quebec flag","Coat of arms","Military decoration"],a:1},
-{id:104,cat:"Canadian Symbols",d:3,q:"Peace Tower commemorates?",o:["Confederation","First World War (completed 1927)","War of 1812","Queen Victoria"],a:1},
-{id:105,cat:"Economy",d:1,q:"Percentage in service industries?",o:["50%+","65%+","75%+","90%+"],a:2},
-{id:106,cat:"Economy",d:1,q:"Largest trading partner?",o:["China","UK","United States","Japan"],a:2},
-{id:107,cat:"Economy",d:2,q:"Three main industry types?",o:["Agriculture, manufacturing, tech","Service, manufacturing, natural resources","Finance, real estate, government","Mining, forestry, fishing"],a:1},
-{id:108,cat:"Economy",d:3,q:"Free trade with US enacted when?",o:["1980","1988","1994","2000"],a:1},
-{id:109,cat:"Economy",d:3,q:"Montreal Stock Exchange opened?",o:["1780","1832","1867","1900"],a:1},
-{id:110,cat:"Regions & Geography",d:1,q:"Capital of Canada?",o:["Toronto","Montreal","Ottawa","Vancouver"],a:2},
-{id:111,cat:"Regions & Geography",d:1,q:"Provinces and territories count?",o:["10 and 2","10 and 3","12 and 3","8 and 5"],a:1},
-{id:112,cat:"Regions & Geography",d:1,q:"Atlantic Provinces?",o:["ON, QC, MB","NL, PEI, NS, NB","BC and AB","SK, MB, ON"],a:1},
-{id:113,cat:"Regions & Geography",d:1,q:"Smallest province?",o:["Nova Scotia","New Brunswick","Prince Edward Island","Newfoundland"],a:2},
-{id:114,cat:"Regions & Geography",d:1,q:"Prairie Provinces?",o:["ON, QC, NB","Manitoba, Saskatchewan, Alberta","BC, AB, SK","Yukon, NWT, Nunavut"],a:1},
-{id:115,cat:"Regions & Geography",d:2,q:"Largest freshwater lake in the world?",o:["Ontario","Huron","Erie","Superior"],a:3},
-{id:116,cat:"Regions & Geography",d:1,q:"Canada\u2019s largest city?",o:["Montreal","Vancouver","Ottawa","Toronto"],a:3},
-{id:117,cat:"Regions & Geography",d:2,q:"Highest mountain in Canada?",o:["Robson","Columbia","Mount Logan","Whistler"],a:2},
-{id:118,cat:"Regions & Geography",d:2,q:"Coldest recorded temperature (-63\u00b0C)?",o:["NWT","Nunavut","Yukon","Manitoba"],a:2},
-{id:119,cat:"Regions & Geography",d:2,q:"Nunavut\u2019s capital?",o:["Whitehorse","Yellowknife","Iqaluit","Dawson City"],a:2},
-{id:120,cat:"Regions & Geography",d:3,q:"\u2018Nunavut\u2019 means?",o:["Cold land","Our land","Northern home","Great expanse"],a:1},
-{id:121,cat:"Regions & Geography",d:3,q:"Who chose Ottawa as capital?",o:["Macdonald 1867","Queen Victoria 1857","George V 1921","Fathers of Confederation 1864"],a:1},
-{id:122,cat:"Regions & Geography",d:2,q:"PEI is known as?",o:["Gateway to Canada","Diamond capital","Birthplace of Confederation","Breadbasket"],a:2},
-{id:123,cat:"Regions & Geography",d:2,q:"World\u2019s highest tides?",o:["BC","NL","Nova Scotia \u2014 Bay of Fundy","Quebec"],a:2},
-{id:124,cat:"Regions & Geography",d:3,q:"Saskatchewan\u2019s % of arable land?",o:["20%","30%","40%","50%"],a:2},
-{id:125,cat:"Regions & Geography",d:2,q:"RCMP training academy?",o:["Ottawa","Winnipeg","Regina","Edmonton"],a:2},
-{id:126,cat:"Regions & Geography",d:3,q:"Mackenzie River length?",o:["2,500 km","3,200 km","4,200 km","5,100 km"],a:2},
-{id:127,cat:"Regions & Geography",d:1,q:"Three oceans bordering Canada?",o:["Pacific, Atlantic, Indian","Pacific, Atlantic, Arctic","Atlantic, Arctic, Southern","Pacific, Arctic, Southern"],a:1},
-{id:128,cat:"Regions & Geography",d:1,q:"Canada\u2019s approximate population?",o:["~20M","~28M","~34M","~40M"],a:2},
-{id:129,cat:"Regions & Geography",d:3,q:"Banff National Park established?",o:["1867","1873","1885","1905"],a:2},
-{id:130,cat:"Regions & Geography",d:2,q:"Largest hydro-electricity producer?",o:["Ontario","BC","Quebec","Manitoba"],a:2},
-{id:131,cat:"Regions & Geography",d:2,q:"Largest naval base?",o:["Vancouver","Victoria","Halifax","St. John\u2019s"],a:2},
-{id:132,cat:"Regions & Geography",d:3,q:"NL joined Canada when?",o:["1867","1905","1949","1999"],a:2}
+var SUMMARIES=[
+{topic:"The Oath of Citizenship",icon:"\ud83c\udde8\ud83c\udde6",sections:[
+{title:"Understanding the Oath",text:"In Canada, loyalty is pledged to a person (the Sovereign) who represents all Canadians, not to a document, flag, or country. In our constitutional monarchy, the Sovereign personifies Canada."},
+{title:"What You Promise",text:"You swear or affirm to be faithful and bear true allegiance to the Sovereign (Queen/King of Canada), their heirs and successors. You promise to faithfully observe the laws of Canada including the Constitution, which recognizes Aboriginal and treaty rights of First Nations, Inuit and M\u00e9tis peoples, and to fulfil your duties as a Canadian citizen."},
+{title:"Applying for Citizenship",text:"Officials check your status and ensure you meet requirements. The test covers two things: (1) knowledge of Canada and rights/responsibilities, and (2) adequate knowledge of English or French. Adults 55+ do not need to write the test. After passing, you receive a Notice to Appear to take the Oath at a ceremony where you sign the form and receive your Citizenship Certificate."}
+]},
+{topic:"Rights & Responsibilities",icon:"\u2696\ufe0f",sections:[
+{title:"Sources of Canadian Law",text:"Laws passed by Parliament and provincial legislatures, English common law, the civil code of France, and the unwritten constitution from Great Britain. Together these secure an 800-year tradition of ordered liberty dating back to Magna Carta (1215)."},
+{title:"Fundamental Freedoms",text:"Freedom of conscience and religion; freedom of thought, belief, opinion and expression (including speech and press); freedom of peaceful assembly; and freedom of association."},
+{title:"Charter Rights (1982)",text:"Entrenched in 1982. Begins: 'Whereas Canada is founded upon principles that recognize the supremacy of God and the rule of law.' Key rights: Mobility Rights (live/work anywhere, passport), Aboriginal Peoples' Rights, Official Language Rights (French/English equal), Multiculturalism (fundamental characteristic of Canadian heritage)."},
+{title:"Citizenship Responsibilities",text:"Obeying the law (no person or group is above it), taking responsibility for oneself and family (work, personal dignity), serving on a jury when called, voting in elections, helping others/volunteering in the community, and protecting Canada's natural, cultural and architectural heritage and environment."},
+{title:"Equality",text:"Men and women are equal under the law. Canada does not tolerate spousal abuse, honour killings, female genital mutilation, forced marriage, or other gender-based violence. These are severely punished."},
+{title:"Defending Canada",text:"No compulsory military service. Serving in the Canadian Forces (navy, army, air force) is a noble career. You can serve in part-time reserves, Coast Guard, police, or fire department. Young people can join the cadets."},
+{title:"Habeas Corpus",text:"The right to challenge unlawful detention by the state. Comes from English common law."}
+]},
+{topic:"Who We Are",icon:"\ud83c\udf41",sections:[
+{title:"Three Founding Peoples",text:"Aboriginal, French, and British. Canada is the only constitutional monarchy in North America. Our institutions uphold Peace, Order and Good Government (key phrase from 1867 BNA Act). Canada is called the 'Great Dominion.'"},
+{title:"Aboriginal Peoples",text:"Three groups: First Nations (about 65% of Aboriginal people, ~600 communities, half on-reserve/half off), M\u00e9tis (30%, mixed Aboriginal/European ancestry, Prairie provinces, speak Michif), and Inuit (4%, 'the people' in Inuktitut, scattered Arctic communities). Rights protected in Constitution. Royal Proclamation of 1763 (King George III) first guaranteed territorial rights."},
+{title:"Residential Schools",text:"1800s to 1980s: federal government placed Aboriginal children in residential schools to assimilate them. Schools were poorly funded, some children physically abused. Languages and cultural practices mostly prohibited. Ottawa formally apologized in 2008."},
+{title:"English and French",text:"18M Anglophones, 7M Francophones. Majority of Francophones in Quebec; 1M in Ontario, New Brunswick, Manitoba. New Brunswick is the only officially bilingual province. Quebecers mostly descended from 8,500 French settlers of the 1600s-1700s. House of Commons recognized Quebecois as a nation within united Canada (2006). 1M Anglo-Quebecers have 250-year heritage."},
+{title:"The Acadians",text:"Descendants of French colonists who settled in the Maritime provinces starting in 1604. Between 1755-1763 (war between Britain and France), more than two-thirds were deported from their homeland. This ordeal is known as the 'Great Upheaval.' Today Acadian culture is flourishing."},
+{title:"Diversity",text:"Majority born in Canada since 1800s, but called a 'land of immigrants.' Largest groups: English, French, Scottish, Irish, German, Italian, Chinese, Aboriginal, Ukrainian, Dutch, South Asian, Scandinavian. Since 1970s, most immigrants from Asian countries. Chinese languages are 2nd most spoken at home. Largest religion: Catholic. Gay and lesbian Canadians enjoy full protection and equal treatment including civil marriage."}
+]},
+{topic:"Canada's History",icon:"\ud83d\udcdc",sections:[
+{title:"Aboriginal Peoples (Pre-Contact)",text:"When Europeans arrived, all regions were occupied. Huron-Wendat and Iroquois were farmers/hunters. Cree and Dene were hunter-gatherers. Sioux followed bison herds. Inuit lived off Arctic wildlife. West Coast peoples dried and smoked fish. Warfare was common over land, resources, and prestige."},
+{title:"First Europeans",text:"Vikings from Iceland reached Labrador and Newfoundland 1,000 years ago (L'Anse aux Meadows, World Heritage site). John Cabot mapped East Coast in 1497 for England. Jacques Cartier explored St. Lawrence (1534-1542), heard 'kanata' (village). By 1550s, 'Canada' appeared on maps."},
+{title:"New France",text:"1604: First settlement by Pierre de Monts and Samuel de Champlain (St. Croix Island, then Port-Royal). 1608: Champlain built fortress at Quebec City. Champlain allied with Algonquin, Montagnais, Huron against Iroquois. Fur trade drove the economy. Outstanding leaders: Jean Talon, Bishop Laval, Count Frontenac. Voyageurs and coureurs des bois travelled by canoe forming alliances with First Nations."},
+{title:"Struggle for a Continent",text:"1670: King Charles II granted Hudson's Bay Company exclusive trading rights. English colonies along the Atlantic became richer than New France. 1759: British defeated French at Plains of Abraham (Quebec City), ending France's empire in America. Both commanders (Wolfe and Montcalm) were killed."},
+{title:"Quebec Act & Loyalists",text:"Quebec Act 1774: constitutional foundation allowing Catholic religious freedom (including holding public office), restored French civil law, maintained British criminal law. After 1776, 40,000+ Loyalists fled American Revolution to Nova Scotia and Quebec. Joseph Brant led thousands of Mohawk. About 3,000 black Loyalists came north. Loyalists came from Dutch, German, British, Scandinavian, Aboriginal origins and many religious backgrounds."},
+{title:"Democracy & Responsible Government",text:"First assembly: Halifax 1758. PEI 1773. NB 1785. Constitutional Act 1791 split Quebec into Upper Canada (Ontario, Loyalist/Protestant/English) and Lower Canada (Quebec, Catholic/French). Granted elected assemblies. Rebellions of 1837-38: reformers in both Canadas wanted faster progress to democracy; defeated by British troops. Lord Durham recommended responsible government. Achieved in Nova Scotia (1847-48) and the Canadas (1848-49) under Lord Elgin. La Fontaine became first leader of responsible government."},
+{title:"Abolition of Slavery",text:"1793: Upper Canada (Lt. Gov. Simcoe) first in British Empire to move toward abolition. 1807: Parliament banned buying/selling slaves. 1833: abolished throughout Empire. Thousands escaped via Underground Railroad (Christian anti-slavery network). Mary Ann Shadd Cary became first woman publisher in Canada (1853)."},
+{title:"Confederation (1867)",text:"1864-1867: Representatives of NS, NB, and Province of Canada created the Dominion of Canada. Two levels: federal and provincial. Old Province of Canada split into Ontario and Quebec. BNA Act passed by British Parliament. Born July 1, 1867. Sir Leonard Tilley suggested 'Dominion of Canada' (inspired by Psalm 72). Until 1982 celebrated as Dominion Day, now Canada Day."},
+{title:"First PM & Expansion",text:"Sir John A. Macdonald: first PM, born Scotland 1815, lawyer in Kingston. His portrait is on the $10 bill. January 11 is Sir John A. Macdonald Day. Sir George-\u00c9tienne Cartier: key Quebec architect, railway lawyer, led Quebec into Confederation. Expansion: MB 1870, BC 1871, PEI 1873, Arctic Islands 1880, Yukon 1898, AB/SK 1905, NL 1949, Nunavut 1999."},
+{title:"Challenge in the West",text:"1869: Canada took over northwest from HBC. Louis Riel led M\u00e9tis uprising, seized Fort Garry. Manitoba created 1870. Riel elected to Parliament but never took seat. Second rebellion 1885 in Saskatchewan led to Riel's execution. Riel is seen as hero, defender of M\u00e9tis rights, father of Manitoba. NWMP (now RCMP) established 1873. Founded Fort Calgary, Fort MacLeod, Regina (headquarters)."},
+{title:"Railway from Sea to Sea",text:"BC joined 1871 after promise of railway. CPR completed Nov 7, 1885 (Donald Smith drove last spike). Built by European and Chinese labour. Chinese faced discrimination including Head Tax (race-based entry fee). Government apologized in 2006."},
+{title:"War of 1812",text:"After Trafalgar (1805), Royal Navy ruled waves. US invaded Canada June 1812. Key figures: Major-General Sir Isaac Brock (captured Detroit, killed at Queenston Heights), Chief Tecumseh, Laura Secord (walked 19 miles/30km to warn of American attack, contributed to victory at Battle of Beaver Dams), Lt-Col Charles de Salaberry (turned back 4,000 Americans at Ch\u00e2teauguay). 1813: Americans burned York (Toronto). 1814: Major-General Robert Ross burned White House. By 1814 invasion failed. Present-day border is partly an outcome of this war."},
+{title:"WWI & Women's Suffrage",text:"600,000+ Canadians served (out of 8M population). Vimy Ridge April 9, 1917 (10,000 killed/wounded). April 9 is Vimy Day. Total: 60,000 killed, 170,000 wounded. 1914-1920: 8,000 former Austro-Hungarian subjects interned. Women's suffrage: Dr. Emily Stowe founder. Manitoba first province (1916). Federal vote 1917-18. Agnes Macphail first woman MP (1921). Quebec granted women vote 1940."},
+{title:"Between the Wars & WWII",text:"British Empire became Commonwealth. Roaring Twenties prosperity. 1929 crash led to Great Depression (27% unemployment 1933). Bank of Canada created 1934. WWII: 1M+ served, 44,000 killed. D-Day June 6, 1944 (15,000 Canadians at Juno Beach, 1 in 10 Allied soldiers). Canada liberated Netherlands 1944-45. RCN became 3rd largest navy. Japanese Canadians forcibly relocated (government apologized 1988). Remembrance Day: Nov 11, 11th hour of 11th day of 11th month. Over 110,000 Canadians have given their lives in all wars."},
+{title:"Sir Wilfrid Laurier",text:"First French-Canadian PM since Confederation. Encouraged western immigration. His portrait is on the $5 bill. November 20 is Sir Wilfrid Laurier Day. Under his leadership, 170,000 Ukrainians, 115,000 Poles and tens of thousands from Germany, France, Norway, Sweden settled in the West before 1914."}
+]},
+{topic:"Modern Canada",icon:"\ud83c\udfd9\ufe0f",sections:[
+{title:"Trade & Economic Growth",text:"Post-war prosperity. GATT (now WTO) opened trade. Oil discovered in Alberta 1947. By 1951 majority could afford food/shelter/clothing. 1945-1970: one of strongest economies. Today one of world's highest living standards."},
+{title:"Social Programs",text:"Canada Health Act ensures basic coverage. Employment insurance (1940). Old Age Security (1927). Canada/Quebec Pension Plans (1965). Publicly funded education by provinces."},
+{title:"International Engagement",text:"Cold War: joined NATO (military alliance) and NORAD (aerospace defence with US). Joined UN. Korean War 1950-53: 500 dead, 1,000 wounded. UN peacekeeping in Egypt, Cyprus, Haiti, Yugoslavia, Afghanistan."},
+{title:"Quebec & Bilingualism",text:"Quiet Revolution (1960s rapid change). 1963: Royal Commission on Bilingualism. Official Languages Act (1969): French/English services in federal government. La Francophonie founded 1970. Sovereignty referendums defeated 1980 and 1995."},
+{title:"A Changing Society",text:"Over 50 years Canada became more flexible/open. 1948: Japanese-Canadians gained vote. Aboriginal people granted vote 1960. Every citizen over 18 may vote. Canada welcomed refugees: 37,000 from Hungary (1956), 50,000+ Vietnamese (1975). By 1960s, one-third had origins neither British nor French."},
+{title:"Arts & Culture",text:"Literature: Stephen Leacock, Louis H\u00e9mon, Robertson Davies, Margaret Laurence, Mordecai Richler, Joy Kogawa, Michael Ondaatje, Rohinton Mistry. Visual arts: Group of Seven (founded 1920, rugged wilderness landscapes). Emily Carr painted West Coast forests and Aboriginal artifacts. Les Automatistes (Quebec abstract art, 1950s, Jean-Paul Riopelle). Kenojuak Ashevak pioneered modern Inuit art. Film: Denys Arcand, Norman Jewison, Atom Egoyan."},
+{title:"Sports & Science",text:"Basketball invented by James Naismith (1891). Hockey dominated by Canadian teams. Donovan Bailey (1996 Olympic sprinter). Chantal Petitclerc (Paralympic wheelchair racer). Wayne Gretzky (Edmonton Oilers 1979-1988). Terry Fox's Marathon of Hope (1980). Rick Hansen circled globe in wheelchair (1985). Paul Henderson scored 1972 Summit Series winning goal ('goal heard around the world'). Canadian Space Agency since 1989, Canadarm. Nobel Prize winners: Gerhard Herzberg, John Polanyi, Sidney Altman, Richard E. Taylor, Michael Smith, Bertram Brockhouse. Marshall McLuhan and Harold Innis: pioneer thinkers."},
+{title:"Great Inventions",text:"Alexander Graham Bell: telephone. Joseph-Armand Bombardier: snowmobile. Sir Sandford Fleming: standard time zones. Matthew Evans & Henry Woodward: first electric light bulb (sold patent to Edison). Reginald Fessenden: radio (first wireless voice message). Dr. Wilder Penfield: pioneering brain surgeon ('greatest living Canadian'). Dr. John A. Hopps: first cardiac pacemaker. SPAR/NRC: Canadarm. Mike Lazaridis & Jim Balsillie: BlackBerry. Sir Frederick Banting & Charles Best: insulin (saved 16 million lives)."}
+]},
+{topic:"Government",icon:"\ud83c\udfdb\ufe0f",sections:[
+{title:"Three Key Facts",text:"Federal state, parliamentary democracy, constitutional monarchy."},
+{title:"Federal State",text:"Federal government: defence, foreign policy, interprovincial trade, currency, navigation, criminal law, citizenship. Provinces: municipal government, education, health, natural resources, property/civil rights, highways. Shared: agriculture, immigration. Each province has elected Legislative Assembly. Three territories have governments/assemblies with similar functions but not province status."},
+{title:"Parliamentary Democracy",text:"People elect members to House of Commons and provincial legislatures. Representatives pass laws, approve spending, keep government accountable. Cabinet ministers must retain 'confidence of the House.' Parliament: Sovereign + Senate + House of Commons. Provincial: Lieutenant Governor + elected Assembly."},
+{title:"How a Bill Becomes Law",text:"Step 1: First Reading (introduced/printed). Step 2: Second Reading (debate principle). Step 3: Committee Stage (clause by clause). Step 4: Report Stage (amendments). Step 5: Third Reading (debate/vote). Step 6: Senate (similar process). Step 7: Royal Assent (Governor General on behalf of Sovereign)."},
+{title:"Constitutional Monarchy",text:"Head of State: hereditary Sovereign (reigns per Constitution). Represented by Governor General (5 years) federally, Lieutenant Governors in provinces (also 5 years). Head of Government: PM (directs governing). In provinces: Premier. Territories: Commissioner (federal representative). Other constitutional monarchies: Denmark, Norway, Sweden, Australia, NZ, Netherlands, Spain, Thailand, Japan, Jordan, Morocco."},
+{title:"Provincial Legislature Titles",text:"Members of the Legislative Assembly (MLAs), Members of the National Assembly (MNAs - Quebec), Members of the Provincial Parliament (MPPs - Ontario), or Members of the House of Assembly (MHAs - some Atlantic provinces)."},
+{title:"The PM and Cabinet",text:"PM selects Cabinet ministers (mostly from House of Commons). They run federal departments, prepare budget, propose laws. Senators appointed by GG on PM's advice, serve until 75. No bill becomes law without passing both chambers and Royal Assent."}
+]},
+{topic:"Federal Elections",icon:"\ud83d\uddf3\ufe0f",sections:[
+{title:"How Elections Work",text:"Must be held 3rd Monday in October every 4 years. PM may ask GG for earlier election. 308 electoral districts (ridings/constituencies). Each riding elects 1 MP. Citizens 18+ may run for office."},
+{title:"Who Can Vote",text:"Canadian citizens, 18+ on voting day, on voters' list. National Register of Electors managed by Elections Canada (neutral agency of Parliament). Voter information card mailed to registered electors. Can be added to list on election day."},
+{title:"Secret Ballot",text:"No one can watch you vote or insist you tell them. Not employers, family, or union representatives. After polls close, ballots counted and results announced."},
+{title:"Voting Procedure",text:"Receive voter information card. Go to polling station with card and ID. Mark X next to candidate of choice. Fold ballot, present to officials. Official tears off number, you deposit in ballot box."},
+{title:"Government Formation",text:"Party with most seats forms government. Leader becomes PM (appointed by GG). Majority government: 50%+ seats. Minority: less than 50%. Must maintain confidence of MPs. If defeated on major issue (e.g., budget), government falls."},
+{title:"Parties & Opposition",text:"Three major parties currently: Conservative Party, New Democratic Party, Liberal Party. Opposition parties peacefully oppose or improve government proposals. Official Opposition: opposition party with most seats, also called Her Majesty's Loyal Opposition."},
+{title:"Other Levels",text:"Municipal government: mayor/reeve + councillors/aldermen. Responsible for planning, streets, sanitation, snow removal, firefighting, ambulance, recreation, transit, local police. Provincial/territorial/municipal elections use secret ballot with different rules from federal. First Nations have band chiefs and councillors responsible for housing, schools, services on reserves."}
+]},
+{topic:"Justice System",icon:"\u2696\ufe0f",sections:[
+{title:"Principles",text:"Presumption of innocence (everyone innocent until proven guilty). Due process (government must respect all legal rights). Rule of law (applies to everyone: judges, politicians, police). Laws are written rules made by elected representatives, intended to provide order and express Canadian values."},
+{title:"Courts",text:"Supreme Court of Canada: highest court. Federal Court: federal government matters. In most provinces: appeal court, trial court (sometimes Court of Queen's Bench or Supreme Court). Also: provincial courts for lesser offences, family courts, traffic courts, small claims courts."},
+{title:"Police",text:"RCMP enforces federal laws throughout Canada. Serves as provincial police in all provinces/territories except Ontario and Quebec (which have their own provincial forces). Municipal police in most major cities. You can question police about their service or conduct; almost all forces have a complaints process."},
+{title:"Legal Help",text:"Lawyers help with legal problems and represent you in court. If you cannot pay, most communities have legal aid services available free or at low cost."}
+]},
+{topic:"Canadian Symbols",icon:"\ud83c\udde8\ud83c\udde6",sections:[
+{title:"The Crown",text:"Symbol of the state for 400+ years. Constitutional monarchy since Confederation 1867 (Queen Victoria's reign). The Crown symbolizes government including Parliament, legislatures, courts, police, Canadian Forces."},
+{title:"Flags",text:"Current maple leaf flag raised 1965. Red-white-red pattern from flag of Royal Military College, Kingston (founded 1876). Red and white: colours of France and England since Middle Ages, Canada's national colours since 1921 (King George V). Union Jack is official Royal Flag. Canadian Red Ensign served as flag for ~100 years. Provinces/territories have their own flags."},
+{title:"Key Symbols",text:"Maple leaf: best-known symbol, adopted by French Canadians in 1700s, on uniforms since 1850s, carved on headstones of fallen soldiers. Beaver: adopted centuries ago as HBC symbol, on five-cent coin, coats of arms of Saskatchewan, Alberta, Montreal, Toronto. Fleur-de-lys: French royalty symbol 1000+ years, Quebec flag (1948). Coat of arms: adopted after WWI, motto 'A mari usque ad mare' (from sea to sea), symbols of England, France, Scotland, Ireland + red maple leaves."},
+{title:"Parliament Buildings",text:"Gothic Revival architecture (Queen Victoria era). Completed 1860s. Centre Block destroyed by fire 1916, rebuilt 1922. Library is only original part remaining. Peace Tower completed 1927 (WWI memorial). Memorial Chamber contains Books of Remembrance with names of soldiers who died. Provincial legislatures: Quebec National Assembly (French Second Empire style), others Baroque/Romanesque/neoclassical."},
+{title:"Sports",text:"Hockey: most popular spectator sport, national winter sport, developed in 1800s. NHL plays for Stanley Cup (donated by Lord Stanley, GG, 1892). Clarkson Cup (2005, Adrienne Clarkson) for women's hockey. Canadian football: 2nd most popular, Grey Cup (Lord Grey, GG, 1909). Curling: introduced by Scottish pioneers. Lacrosse: official summer sport, first played by Aboriginals. Soccer: most registered players. Basketball: invented by Canadian James Naismith (1891)."},
+{title:"O Canada & Royal Anthem",text:"O Canada: proclaimed national anthem 1980, first sung in Quebec City 1880. French and English have different words. Royal Anthem: 'God Save the Queen (King)' can be played/sung to honour the Sovereign."},
+{title:"Order of Canada & Victoria Cross",text:"Order of Canada: started 1967 (centennial of Confederation). Victoria Cross (V.C.): highest honour, for conspicuous bravery, awarded to 96 Canadians since 1854. Notable recipients: Lt. Alexander Roberts Dunn (first Canadian, Crimean War), Able Seaman William Hall (first black man), Corporal Filip Konowal (born Ukraine), Captain Billy Bishop (WWI flying ace), Lt. Robert Hampton Gray (last Canadian, WWII)."},
+{title:"Important Dates",text:"New Year's Day: Jan 1. Sir John A. Macdonald Day: Jan 11. Good Friday/Easter Monday. Vimy Day: Apr 9. Victoria Day: Monday before May 25 (Sovereign's birthday). F\u00eate nationale (Quebec): Jun 24 (St. John the Baptist). Canada Day: Jul 1. Labour Day: 1st Monday Sep. Thanksgiving: 2nd Monday Oct. Remembrance Day: Nov 11. Sir Wilfrid Laurier Day: Nov 20. Christmas: Dec 25. Boxing Day: Dec 26."}
+]},
+{topic:"Economy",icon:"\ud83d\udcb0",sections:[
+{title:"Three Industry Types",text:"Service industries: 75%+ of workers (transportation, education, healthcare, construction, banking, communications, retail, tourism, government). Manufacturing: paper, high tech, aerospace, automobiles, machinery, food, clothing. Natural resources: forestry, fishing, agriculture, mining, energy. Economy historically based on farming and exporting fur, fish, timber."},
+{title:"Trade",text:"Canada has always been a trading nation. Largest partner: United States (biggest bilateral trading relationship in the world, 75%+ of exports). Free trade with US enacted 1988. NAFTA 1994 (with Mexico). G8 member. Exports: energy, industrial goods, machinery, automotive, agricultural, fishing, forestry products, consumer goods. Peace Arch at Blaine, Washington symbolizes the close ties ('world's longest undefended border')."},
+{title:"Historical Economy",text:"First companies formed during French/British regimes for fur trade. Hudson's Bay Company dominated from Fort Garry (Winnipeg) to Fort Victoria. Montreal Stock Exchange opened 1832. First financial institutions in late 18th/early 19th centuries."}
+]},
+{topic:"Regions & Geography",icon:"\ud83d\uddfa\ufe0f",sections:[
+{title:"Overview",text:"2nd largest country (10M km\u00b2). Three oceans: Pacific (west), Atlantic (east), Arctic (north). 10 provinces, 3 territories. ~34M people (majority in cities). Capital: Ottawa (chosen 1857 by Queen Victoria, 4th largest metro, National Capital Region 4,700 km\u00b2)."},
+{title:"Atlantic Provinces",text:"NL (capital St. John's, most easterly point, own time zone, oldest British colony, offshore oil, Labrador hydro). PEI (Charlottetown, smallest province, beaches/red soil/potatoes, birthplace of Confederation, Confederation Bridge, Anne of Green Gables by Lucy Maud Montgomery). NS (Halifax, most populous Atlantic province, gateway to Canada, Bay of Fundy highest tides, largest naval base, deep-water ice-free port, 700+ annual festivals, Celtic/Gaelic traditions). NB (Fredericton, founded by Loyalists, St. John River, only bilingual province, Moncton is principal Francophone Acadian centre, 1/3 population lives/works in French)."},
+{title:"Central Canada",text:"More than half of Canadians live near Great Lakes and St. Lawrence River. Ontario and Quebec produce 75%+ of Canadian manufactured goods. Quebec (capital Quebec City, ~8M people, 75%+ French-speaking, largest hydro producer, pulp and paper, pharmaceuticals, aeronautics, Montreal is 2nd largest city and 2nd largest French-speaking city after Paris). Ontario (capital Toronto, 12M+ people, largest and most diverse, financial centre, Niagara vineyards/wines, dairy/beef/poultry/grains, largest French-speaking population outside Quebec, Five Great Lakes: Ontario, Erie, Huron, Michigan (US), Superior (largest freshwater lake in world))."},
+{title:"Prairie Provinces",text:"Rich in energy and fertile farmland. Dry climate, cold winters, hot summers. Manitoba (capital Winnipeg, Portage and Main intersection, St. Boniface French Quarter 45,000 Francophones, 14% Ukrainian origins, largest Aboriginal population of any province 15%+). Saskatchewan (capital Regina, RCMP training academy, 40% of Canada's arable land, largest grain/oilseed producer, richest uranium/potash deposits, Saskatoon: mining HQ). Alberta (capital Edmonton, most populous prairie province, Lake Louise/Rocky Mountains named for Princess Louise Caroline Alberta, 5 national parks including Banff 1885, Badlands fossils/dinosaurs, largest oil/gas producer, oil sands, vast cattle ranches)."},
+{title:"West Coast",text:"BC (capital Victoria, 4M people, Canada's westernmost province, Pacific gateway, Port of Vancouver largest/busiest, forestry 50% of goods (lumber, newsprint, pulp/paper), mining, fishing, Okanagan Valley fruit orchards and wine, ~600 provincial parks, large Asian communities (Chinese and Punjabi most spoken after English))."},
+{title:"Northern Territories",text:"One-third of land mass, population ~100,000. Gold, lead, copper, diamond, zinc mines. Oil/gas being developed. 'Land of the Midnight Sun' (24hr daylight in summer, 3 months darkness in winter). Tundra: vast rocky Arctic plain, permafrost, no trees. Inuit art sold worldwide. Yukon (capital Whitehorse, Gold Rush 1890s celebrated in poetry of Robert W. Service, White Pass and Yukon Railway, Mount Logan highest mountain in Canada, coldest temperature -63\u00b0C). NWT (capital Yellowknife pop 20,000, 'diamond capital of North America', 50%+ Aboriginal, Mackenzie River 4,200 km 2nd longest in North America). Nunavut (capital Iqaluit, 'our land' in Inuktitut, established 1999, 85% Inuit, 19-member Legislative Assembly by consensus, Inuktitut is first language in schools). Canadian Rangers (part of Forces Reserves) patrol the Arctic by snowmobile and ATV."}
+]}
 ];
+var QUESTIONS=[
+// === OATH OF CITIZENSHIP (NEW) ===
+{id:1,cat:"The Oath of Citizenship",d:1,q:"In the Oath of Citizenship, to whom do you pledge loyalty?",o:["The Canadian flag","The Constitution","The Sovereign (Queen or King)","The Prime Minister"],a:2},
+{id:2,cat:"The Oath of Citizenship",d:2,q:"In Canada, loyalty is pledged to a person (the Sovereign) rather than to what?",o:["A province or territory","A document, flag, or country","A political party","The military"],a:1},
+{id:3,cat:"The Oath of Citizenship",d:2,q:"The Oath of Citizenship recognizes the Aboriginal and treaty rights of which peoples?",o:["Only First Nations","First Nations and Inuit","First Nations, Inuit and M\u00e9tis","Only the M\u00e9tis"],a:2},
+{id:4,cat:"The Oath of Citizenship",d:1,q:"Who does NOT need to write the citizenship test?",o:["Anyone born in Canada","Adults aged 55 and over","Permanent residents","People with university degrees"],a:1},
+{id:5,cat:"The Oath of Citizenship",d:2,q:"What are the two basic requirements tested for citizenship?",o:["Income level and education","Knowledge of Canada and adequate English or French","Military service and employment","Property ownership and residency"],a:1},
+{id:6,cat:"The Oath of Citizenship",d:2,q:"What do you receive at the citizenship ceremony?",o:["A Canadian passport","A voter registration card","Your Canadian Citizenship Certificate","A social insurance number"],a:2},
+// === RIGHTS & RESPONSIBILITIES ===
+{id:7,cat:"Rights & Responsibilities",d:1,q:"What are three responsibilities of citizenship?",o:["Being loyal, recycling, serving in navy","Obeying the law, taking responsibility for oneself and family, serving on a jury","Learning both languages, voting, joining a union","Buying Canadian products, owning a business, using less water"],a:1},
+{id:8,cat:"Rights & Responsibilities",d:1,q:"Are men and women equal under the law?",o:["Yes","No","Only in certain provinces","Only for citizens"],a:0},
+{id:9,cat:"Rights & Responsibilities",d:2,q:"What is habeas corpus?",o:["Right to a fair trial","Right to challenge unlawful detention by the state","Right to vote","Right to own property"],a:1},
+{id:10,cat:"Rights & Responsibilities",d:2,q:"When was the Charter of Rights and Freedoms entrenched?",o:["1867","1947","1982","1999"],a:2},
+{id:11,cat:"Rights & Responsibilities",d:2,q:"Name four fundamental freedoms.",o:["Speech, religion, press, assembly","Conscience/religion; thought/expression; peaceful assembly; association","Travel, work, vote, own land","Movement, privacy, commerce, education"],a:1},
+{id:12,cat:"Rights & Responsibilities",d:2,q:"What does Mobility Rights mean?",o:["Drive without a license","Live and work anywhere in Canada, apply for a passport","Travel internationally without restrictions","Must live where born"],a:1},
+{id:13,cat:"Rights & Responsibilities",d:1,q:"What justice responsibility do citizens have?",o:["Becoming a lawyer","Serving on a jury when called","Reporting all crimes","Attending court yearly"],a:1},
+{id:14,cat:"Rights & Responsibilities",d:3,q:"The Magna Carta was signed in what year?",o:["1066","1215","1497","1763"],a:1},
+{id:15,cat:"Rights & Responsibilities",d:3,q:"The Charter recognizes the supremacy of what two things?",o:["Parliament and Crown","God and the rule of law","English and French","The people and democracy"],a:1},
+{id:16,cat:"Rights & Responsibilities",d:1,q:"Is there compulsory military service in Canada?",o:["Yes, for all over 18","Yes, in wartime","No","Only for men"],a:2},
+{id:17,cat:"Rights & Responsibilities",d:2,q:"Name two key documents containing our rights.",o:["Citizenship Act and Immigration Act","Magna Carta and Charter of Rights and Freedoms","Constitution Act and Official Languages Act","BNA Act and Quebec Act"],a:1},
+{id:18,cat:"Rights & Responsibilities",d:2,q:"What is multiculturalism in Canada?",o:["A law requiring diversity quotas","A fundamental characteristic of Canadian heritage and identity","A temporary immigration policy","A Quebec-only initiative"],a:1},
+{id:19,cat:"Rights & Responsibilities",d:1,q:"What is an example of helping others in the community?",o:["Paying taxes","Volunteering at a food bank or charity","Watching the news","Owning a business"],a:1},
+// === WHO WE ARE ===
+{id:20,cat:"Who We Are",d:1,q:"Who are the three founding peoples?",o:["English, French, American","Aboriginal, French, British","Inuit, M\u00e9tis, First Nations","Scottish, Irish, Welsh"],a:1},
+{id:21,cat:"Who We Are",d:1,q:"What does 'Inuit' mean?",o:["The warriors","The hunters","The people","The northerners"],a:2},
+{id:22,cat:"Who We Are",d:2,q:"Who are the M\u00e9tis?",o:["Aboriginal people of the Arctic","Distinct people of mixed Aboriginal and European ancestry","French Canadians from Quebec","British settlers"],a:1},
+{id:23,cat:"Who We Are",d:2,q:"What is the breakdown of Aboriginal peoples?",o:["50% First Nations, 40% M\u00e9tis, 10% Inuit","65% First Nations, 30% M\u00e9tis, 4% Inuit","80% First Nations, 15% Inuit, 5% M\u00e9tis","Equal thirds"],a:1},
+{id:24,cat:"Who We Are",d:1,q:"Which is the only officially bilingual province?",o:["Quebec","Ontario","New Brunswick","Manitoba"],a:2},
+{id:25,cat:"Who We Are",d:2,q:"Who are the Acadians?",o:["French colonists in the Maritimes since 1604","British settlers in Nova Scotia","Aboriginal peoples of Atlantic Canada","American Loyalists"],a:0},
+{id:26,cat:"Who We Are",d:3,q:"The Acadians' deportation is known as what?",o:["Quiet Revolution","Great Upheaval","Trail of Tears","Expulsion Act"],a:1},
+{id:27,cat:"Who We Are",d:2,q:"How many Anglophones and Francophones?",o:["10M and 3M","18M and 7M","25M and 10M","15M and 5M"],a:1},
+{id:28,cat:"Who We Are",d:3,q:"In 2006, the Quebecois were recognized as what?",o:["Independent state","Nation within a united Canada","Distinct society","Founding people"],a:1},
+{id:29,cat:"Who We Are",d:1,q:"Largest religious affiliation in Canada?",o:["Protestant","Catholic","Muslim","No religion"],a:1},
+{id:30,cat:"Who We Are",d:3,q:"When did Ottawa apologize for residential schools?",o:["1995","2000","2008","2012"],a:2},
+{id:31,cat:"Who We Are",d:2,q:"What language do the M\u00e9tis speak?",o:["Inuktitut","Cree","Michif","Dene"],a:2},
+{id:32,cat:"Who We Are",d:2,q:"What is the 2nd most spoken language at home in Canada's biggest cities?",o:["French","Chinese languages","Spanish","Punjabi"],a:1},
+{id:33,cat:"Who We Are",d:2,q:"Do gay and lesbian Canadians enjoy equal treatment under the law?",o:["No","Yes, including access to civil marriage","Only in some provinces","Only since 2020"],a:1},
+{id:34,cat:"Who We Are",d:3,q:"Most Quebecers are descendants of how many French settlers?",o:["2,000","5,000","8,500","15,000"],a:2},
+// === CANADA'S HISTORY ===
+{id:35,cat:"Canada's History",d:1,q:"Who first explored the St. Lawrence River?",o:["Cabot","Champlain","Jacques Cartier","Pierre de Monts"],a:2},
+{id:36,cat:"Canada's History",d:1,q:"Where does the name 'Canada' come from?",o:["French for great land","Iroquoian 'kanata' meaning village","Aboriginal for meeting place","British term"],a:1},
+{id:37,cat:"Canada's History",d:2,q:"Who founded Quebec City in 1608?",o:["Jacques Cartier","Samuel de Champlain","Pierre de Monts","Count Frontenac"],a:1},
+{id:38,cat:"Canada's History",d:2,q:"What drove the early economy of New France?",o:["Gold mining","The fur trade","Fishing","Agriculture"],a:1},
+{id:39,cat:"Canada's History",d:3,q:"Who were the voyageurs and coureurs des bois?",o:["French soldiers","Skilled canoe traders who formed alliances with First Nations","British governors","Acadian farmers"],a:1},
+{id:40,cat:"Canada's History",d:2,q:"What did the CPR symbolize?",o:["Defeat of Americans","Unity connecting Canada sea to sea","Start of fur trade","Immigration begins"],a:1},
+{id:41,cat:"Canada's History",d:1,q:"When was Confederation?",o:["July 4, 1776","July 1, 1867","January 1, 1901","July 1, 1982"],a:1},
+{id:42,cat:"Canada's History",d:1,q:"Who was Canada's first PM?",o:["Laurier","Cartier","Sir John Alexander Macdonald","La Fontaine"],a:2},
+{id:43,cat:"Canada's History",d:2,q:"Who was La Fontaine?",o:["First PM","First leader of responsible government, French language champion","RCMP founder","Governor of New France"],a:1},
+{id:44,cat:"Canada's History",d:2,q:"Significance of Vimy Ridge?",o:["Ended War of 1812","Major Canadian victory April 1917 in WWI","First WWII battle","Independence from Britain"],a:1},
+{id:45,cat:"Canada's History",d:2,q:"Plains of Abraham 1759?",o:["French defeated British","British defeated French, ending France's American empire","Canada independence","Americans invaded"],a:1},
+{id:46,cat:"Canada's History",d:2,q:"Who were the United Empire Loyalists?",o:["French settlers","Crown loyalists who fled American Revolution to Canada","Aboriginal allies","War of 1812 soldiers"],a:1},
+{id:47,cat:"Canada's History",d:3,q:"When did Upper Canada move toward abolishing slavery?",o:["1763","1793","1833","1867"],a:1},
+{id:48,cat:"Canada's History",d:2,q:"War of 1812 is remembered for?",o:["Defeating Napoleon","Ensuring Canada's independence from the US","Beginning Confederation","Yukon Gold Rush"],a:1},
+{id:49,cat:"Canada's History",d:3,q:"Key Confederation architect from Quebec?",o:["Macdonald","George-\u00c9tienne Cartier","Laurier","Riel"],a:1},
+{id:50,cat:"Canada's History",d:3,q:"What was the Quebec Act of 1774?",o:["Made Quebec independent","Catholic freedom and French civil law restored","Forced English","Trade agreement"],a:1},
+{id:51,cat:"Canada's History",d:2,q:"Who led Loyalist Mohawks into Canada?",o:["Tecumseh","Joseph Brant","Riel","Dumont"],a:1},
+{id:52,cat:"Canada's History",d:2,q:"Father of Manitoba, M\u00e9tis rights defender?",o:["Macdonald","Dumont","Louis Riel","Sam Steele"],a:2},
+{id:53,cat:"Canada's History",d:3,q:"First elected assembly in Canada?",o:["1758 Halifax","1773 Charlottetown","1791 Quebec City","1867 Ottawa"],a:0},
+{id:54,cat:"Canada's History",d:1,q:"BNA Act is also known as?",o:["Quebec Act","Constitution Act, 1867","Charter of Rights","Statute of Westminster"],a:1},
+{id:55,cat:"Canada's History",d:3,q:"Who suggested 'Dominion of Canada'?",o:["Macdonald","Sir Leonard Tilley","Cartier","Laurier"],a:1},
+{id:56,cat:"Canada's History",d:2,q:"Original four provinces?",o:["ON, QC, MB, BC","ON, QC, NS, NB","ON, QC, PEI, NS","All 10"],a:1},
+{id:57,cat:"Canada's History",d:3,q:"First French-Canadian PM?",o:["Cartier","La Fontaine","Sir Wilfrid Laurier","Pierre Trudeau"],a:2},
+{id:58,cat:"Canada's History",d:2,q:"Laura Secord was known for?",o:["First woman MP","Walking 19 miles to warn of American attack in War of 1812","Founding a hospital","Writing anthem"],a:1},
+{id:59,cat:"Canada's History",d:2,q:"CPR last spike driven when?",o:["1867","1871","1885","1900"],a:2},
+{id:60,cat:"Canada's History",d:3,q:"Royal Proclamation of 1763 issued by?",o:["Queen Victoria","King George III","King George V","Queen Elizabeth II"],a:1},
+{id:61,cat:"Canada's History",d:1,q:"What was D-Day (June 6, 1944)?",o:["End of WWI","Allied invasion of Normandy, Canadians at Juno Beach","Start of Korean War","Independence"],a:1},
+{id:62,cat:"Canada's History",d:3,q:"How many served in WWI?",o:["100,000","300,000","600,000","1 million"],a:2},
+{id:63,cat:"Canada's History",d:3,q:"How many killed in WWI?",o:["10,000","30,000","60,000","100,000"],a:2},
+{id:64,cat:"Canada's History",d:2,q:"What happened in the Rebellions of 1837-38?",o:["Quebec separated from Canada","Reformers in Upper and Lower Canada were defeated by British troops","The CPR was built","Women got the vote"],a:1},
+{id:65,cat:"Canada's History",d:3,q:"Who was Lord Durham?",o:["First PM of Canada","English reformer who recommended responsible government after the rebellions","Founder of the RCMP","Governor of New France"],a:1},
+{id:66,cat:"Canada's History",d:3,q:"What year was the Constitutional Act that created Upper and Lower Canada?",o:["1763","1774","1791","1812"],a:2},
+{id:67,cat:"Canada's History",d:2,q:"In the War of 1812, who burned the White House in Washington?",o:["The French","Major-General Robert Ross from Nova Scotia","Chief Tecumseh","The Americans burned their own"],a:1},
+{id:68,cat:"Canada's History",d:2,q:"Whose portrait is on the Canadian $5 bill?",o:["Macdonald","Queen Elizabeth","Sir Wilfrid Laurier","Banting"],a:2},
+{id:69,cat:"Canada's History",d:3,q:"Whose portrait is on the $10 bill?",o:["Laurier","Queen Elizabeth","Sir John A. Macdonald","Borden"],a:2},
+{id:70,cat:"Canada's History",d:2,q:"How many total Canadians have given their lives in all wars?",o:["60,000","80,000","110,000","150,000"],a:2},
+{id:71,cat:"Canada's History",d:2,q:"Remembrance Day is observed at what specific time?",o:["Noon on November 11","9 AM on November 11","11th hour of 11th day of 11th month","Sunset on November 11"],a:2},
+{id:72,cat:"Canada's History",d:3,q:"Who was Mary Ann Shadd Cary?",o:["First woman MP","First woman publisher in Canada (1853), anti-slavery activist","First female doctor","First female judge"],a:1},
+{id:73,cat:"Canada's History",d:3,q:"How many Ukrainians immigrated to Western Canada before 1914?",o:["50,000","100,000","170,000","250,000"],a:2},
+{id:74,cat:"Canada's History",d:2,q:"When did the government apologize for the Chinese Head Tax?",o:["1988","2000","2006","2010"],a:2},
+{id:75,cat:"Canada's History",d:3,q:"About how many black Loyalists came to Canada?",o:["500","1,000","3,000","10,000"],a:2},
+// === MODERN CANADA ===
+{id:76,cat:"Modern Canada",d:2,q:"Oil discovered in Alberta when?",o:["1920","1935","1947","1960"],a:2},
+{id:77,cat:"Modern Canada",d:2,q:"Official Languages Act (1969)?",o:["All must speak both","Guarantees French/English federal services","French only in Quebec","Aboriginal languages official"],a:1},
+{id:78,cat:"Modern Canada",d:2,q:"Cold War military alliance Canada joined?",o:["UN only","NATO","Warsaw Pact","EU"],a:1},
+{id:79,cat:"Modern Canada",d:2,q:"What is the Quiet Revolution?",o:["Rapid change in Quebec 1960s","Peaceful Confederation transition","1970s multiculturalism","Charter creation"],a:0},
+{id:80,cat:"Modern Canada",d:1,q:"Who invented basketball?",o:["Gretzky","Terry Fox","James Naismith","Bell"],a:2},
+{id:81,cat:"Modern Canada",d:1,q:"Terry Fox is famous for?",o:["Olympic gold","Marathon of Hope for cancer research","Inventing Canadarm","First astronaut"],a:1},
+{id:82,cat:"Modern Canada",d:3,q:"Bank of Canada created when?",o:["1867","1920","1934","1945"],a:2},
+{id:83,cat:"Modern Canada",d:2,q:"Manitoba women first got provincial vote?",o:["1900","1916","1921","1940"],a:1},
+{id:84,cat:"Modern Canada",d:3,q:"Agnes Macphail was?",o:["First female PM","First woman MP (1921)","First female SCC justice","First female GG"],a:1},
+{id:85,cat:"Modern Canada",d:2,q:"Aboriginal people gained federal vote when?",o:["1918","1940","1960","1982"],a:2},
+{id:86,cat:"Modern Canada",d:3,q:"What is NORAD?",o:["Free Trade Agreement","NATO","North American Aerospace Defence Command","Aboriginal Rights Org"],a:2},
+{id:87,cat:"Modern Canada",d:2,q:"Who discovered insulin?",o:["Bell","Banting and Best","Penfield","Hopps"],a:1},
+{id:88,cat:"Modern Canada",d:2,q:"Who invented the snowmobile?",o:["Fleming","Bombardier","Bell","Fessenden"],a:1},
+{id:89,cat:"Modern Canada",d:3,q:"Who invented standard time zones?",o:["Sir Sandford Fleming","Bell","Bombardier","Evans"],a:0},
+{id:90,cat:"Modern Canada",d:2,q:"What did Rick Hansen do in 1985?",o:["Won Olympic gold","Circled the globe in a wheelchair for spinal cord research","Invented the Canadarm","Ran the Marathon of Hope"],a:1},
+{id:91,cat:"Modern Canada",d:2,q:"Who scored the 1972 Summit Series winning goal?",o:["Wayne Gretzky","Bobby Orr","Paul Henderson","Terry Fox"],a:2},
+{id:92,cat:"Modern Canada",d:2,q:"What art group captured rugged Canadian wilderness landscapes?",o:["Les Automatistes","The Group of Seven (founded 1920)","The Royal Academy","The Beaver Club"],a:1},
+{id:93,cat:"Modern Canada",d:3,q:"Who was Emily Carr?",o:["First woman PM","Painter of West Coast forests and Aboriginal artifacts","Inventor of the telephone","Olympic champion"],a:1},
+{id:94,cat:"Modern Canada",d:3,q:"Since when has Canada participated in space exploration?",o:["1969","1979","1989","1999"],a:2},
+{id:95,cat:"Modern Canada",d:2,q:"How many lives has insulin saved worldwide?",o:["1 million","8 million","16 million","50 million"],a:2},
+{id:96,cat:"Modern Canada",d:2,q:"In the Korean War, how many Canadians were killed?",o:["100","500","1,500","5,000"],a:1},
+{id:97,cat:"Modern Canada",d:3,q:"Who was Dr. Wilder Penfield?",o:["Discoverer of insulin","Pioneering brain surgeon at McGill, called 'greatest living Canadian'","Inventor of the pacemaker","First Canadian astronaut"],a:1},
+{id:98,cat:"Modern Canada",d:3,q:"Who invented the first cardiac pacemaker?",o:["Banting","Penfield","Dr. John A. Hopps","Bombardier"],a:2},
+// === GOVERNMENT ===
+{id:99,cat:"Government",d:1,q:"Three key facts about Canada's government?",o:["Republic, democracy, federation","Federal state, parliamentary democracy, constitutional monarchy","Monarchy, senate, legislature","Federal, provincial, municipal"],a:1},
+{id:100,cat:"Government",d:2,q:"Constitutional monarchy means?",o:["Queen makes all laws","Head of State is hereditary Sovereign per Constitution","PM is monarch","No written constitution"],a:1},
+{id:101,cat:"Government",d:1,q:"Three branches of government?",o:["Federal, provincial, municipal","Executive, Legislative, Judicial","Senate, House, Supreme Court","PM, Cabinet, Parliament"],a:1},
+{id:102,cat:"Government",d:1,q:"Head of state vs head of government?",o:["Sovereign=state; PM=government","PM=state; Sovereign=government","Equal power","GG is both"],a:0},
+{id:103,cat:"Government",d:1,q:"Three levels of government?",o:["Executive, legislative, judicial","Federal, provincial/territorial, municipal","Senate, House, Crown","PM, Premier, Mayor"],a:1},
+{id:104,cat:"Government",d:2,q:"Three parts of Parliament?",o:["PM, Cabinet, Senate","Sovereign, Senate, House of Commons","House, Senate, Supreme Court","GG, PM, Cabinet"],a:1},
+{id:105,cat:"Government",d:2,q:"How are Senators chosen?",o:["Elected","Appointed by GG on PM's advice","Chosen by premiers","Selected by SCC"],a:1},
+{id:106,cat:"Government",d:3,q:"Senators serve until age?",o:["65","70","75","80"],a:2},
+{id:107,cat:"Government",d:2,q:"Before a bill becomes law?",o:["PM signs it","Pass House + Senate, receive Royal Assent","SCC approves","House only"],a:1},
+{id:108,cat:"Government",d:3,q:"Government loses confidence vote?",o:["Nothing","Must resign","SCC intervenes","Referendum"],a:1},
+{id:109,cat:"Government",d:2,q:"Sovereign's representative in provinces?",o:["Premier","Lieutenant Governor","Commissioner","Senator"],a:1},
+{id:110,cat:"Government",d:3,q:"What are members of Ontario's provincial legislature called?",o:["MLAs","MNAs","MPPs","MHAs"],a:2},
+{id:111,cat:"Government",d:3,q:"What are members of Quebec's legislature called?",o:["MLAs","MNAs (Members of the National Assembly)","MPPs","MHAs"],a:1},
+{id:112,cat:"Government",d:2,q:"How many steps does a bill go through to become law?",o:["3","5","7","9"],a:2},
+{id:113,cat:"Government",d:2,q:"Who represents the federal government in the territories?",o:["Lieutenant Governor","Premier","Commissioner","Senator"],a:2},
+// === FEDERAL ELECTIONS ===
+{id:114,cat:"Federal Elections",d:1,q:"How are MPs chosen?",o:["UN appoints","Premiers choose","Elected by voters in their riding","Landowners elect"],a:2},
+{id:115,cat:"Federal Elections",d:1,q:"Who can vote federally?",o:["Anyone in Canada","Citizens 18+ on voting day","PRs over 16","Property owners"],a:1},
+{id:116,cat:"Federal Elections",d:1,q:"Is your vote secret?",o:["No","Yes, by law","Only from employers","Only federally"],a:1},
+{id:117,cat:"Federal Elections",d:2,q:"Which party forms government?",o:["Most votes total","GG selects","Most seats in House","Senate winner"],a:2},
+{id:118,cat:"Federal Elections",d:2,q:"Majority government means?",o:["50%+ seats in House","Half voted for them","All provinces support","Senate agrees"],a:0},
+{id:119,cat:"Federal Elections",d:2,q:"How many electoral districts?",o:["200","250","308","350"],a:2},
+{id:120,cat:"Federal Elections",d:2,q:"Official Opposition is?",o:["Party that lost","Opposition party with most seats","Any disagreeing party","The Senate"],a:1},
+{id:121,cat:"Federal Elections",d:1,q:"How to mark your ballot?",o:["Write name","Mark X next to candidate","Circle name","Stamp it"],a:1},
+{id:122,cat:"Federal Elections",d:2,q:"When must federal elections be held?",o:["First Monday in June every 5 years","Third Monday in October every 4 years","Last Friday in November every 3 years","Whenever the PM decides"],a:1},
+{id:123,cat:"Federal Elections",d:2,q:"Name three major federal political parties.",o:["Conservative, NDP, Liberal","Conservative, Liberal, Bloc","NDP, Green, Bloc","Liberal, Reform, NDP"],a:0},
+{id:124,cat:"Federal Elections",d:2,q:"What is the National Register of Electors?",o:["A list of all Canadian citizens","A permanent database of citizens 18+ qualified to vote, managed by Elections Canada","A registry of political parties","A census database"],a:1},
+// === JUSTICE SYSTEM ===
+{id:125,cat:"Justice System",d:1,q:"Presumption of innocence means?",o:["Must prove innocence first","Innocent until proven guilty","Only citizens","Police decide"],a:1},
+{id:126,cat:"Justice System",d:1,q:"Highest court in Canada?",o:["Federal Court","Queen's Bench","Supreme Court of Canada","Provincial Supreme Court"],a:2},
+{id:127,cat:"Justice System",d:2,q:"Can you question police conduct?",o:["No","Yes, complaints process exists","Only via lawyer","Only citizens"],a:1},
+{id:128,cat:"Justice System",d:2,q:"What is due process?",o:["Speedy trial","Government must respect all legal rights","Passing a law","Election process"],a:1},
+{id:129,cat:"Justice System",d:2,q:"Who enforces federal laws?",o:["Provincial police","Municipal police","The RCMP","Canadian Forces"],a:2},
+{id:130,cat:"Justice System",d:3,q:"Which provinces have own provincial police?",o:["AB and BC","Ontario and Quebec","MB and SK","NS and NB"],a:1},
+{id:131,cat:"Justice System",d:2,q:"If you cannot pay for a lawyer, what is available?",o:["Nothing","Legal aid services, free or low cost","You must represent yourself","The government assigns a judge"],a:1},
+// === CANADIAN SYMBOLS ===
+{id:132,cat:"Canadian Symbols",d:1,q:"Remembrance Day poppy represents?",o:["Sovereign","Confederation","Dead PMs","Canadians who served or died in wars"],a:3},
+{id:133,cat:"Canadian Symbols",d:1,q:"When is Canada Day?",o:["Jan 1","Jul 1","Jul 4","Nov 11"],a:1},
+{id:134,cat:"Canadian Symbols",d:1,q:"National winter sport?",o:["Skiing","Ice hockey","Curling","Snowboarding"],a:1},
+{id:135,cat:"Canadian Symbols",d:1,q:"Official summer sport?",o:["Soccer","Baseball","Lacrosse","Cricket"],a:2},
+{id:136,cat:"Canadian Symbols",d:2,q:"Highest honour for Canadians?",o:["Order of Canada","Victoria Cross","GG Award","Medal of Bravery"],a:1},
+{id:137,cat:"Canadian Symbols",d:1,q:"Current flag first raised?",o:["1867","1921","1965","1982"],a:2},
+{id:138,cat:"Canadian Symbols",d:2,q:"Official animal symbol?",o:["Moose","Beaver","Polar bear","Loon"],a:1},
+{id:139,cat:"Canadian Symbols",d:2,q:"National motto?",o:["Peace, Order, Good Government","A mari usque ad mare (From sea to sea)","Strong and Free","In God We Trust"],a:1},
+{id:140,cat:"Canadian Symbols",d:2,q:"When is Remembrance Day?",o:["Oct 31","Nov 1","Nov 11","Dec 25"],a:2},
+{id:141,cat:"Canadian Symbols",d:2,q:"When is Vimy Day?",o:["April 9","May 25","July 1","Nov 11"],a:0},
+{id:142,cat:"Canadian Symbols",d:3,q:"O Canada proclaimed anthem when?",o:["1867","1880","1965","1980"],a:3},
+{id:143,cat:"Canadian Symbols",d:3,q:"O Canada first sung where?",o:["Ottawa","Montreal","Quebec City","Toronto"],a:2},
+{id:144,cat:"Canadian Symbols",d:3,q:"Who donated the Stanley Cup?",o:["Queen Victoria","Lord Stanley, GG, 1892","Macdonald","Lord Grey"],a:1},
+{id:145,cat:"Canadian Symbols",d:3,q:"Who donated the Grey Cup?",o:["Lord Stanley","Lord Grey, GG, 1909","Laurier","Queen Elizabeth"],a:1},
+{id:146,cat:"Canadian Symbols",d:2,q:"What is the fleur-de-lys?",o:["National flower","French royalty symbol 1000+ years, Quebec flag","Coat of arms","Military decoration"],a:1},
+{id:147,cat:"Canadian Symbols",d:3,q:"Peace Tower commemorates?",o:["Confederation","First World War (completed 1927)","War of 1812","Queen Victoria"],a:1},
+{id:148,cat:"Canadian Symbols",d:2,q:"Where does the flag's red-white-red pattern come from?",o:["The French tricolour","Flag of Royal Military College, Kingston (1876)","The British Union Jack","The Quebec flag"],a:1},
+{id:149,cat:"Canadian Symbols",d:2,q:"Who assigned Canada's national colours (red and white) in 1921?",o:["Queen Victoria","King George V","Sir John A. Macdonald","Sir Wilfrid Laurier"],a:1},
+{id:150,cat:"Canadian Symbols",d:2,q:"When is Sir John A. Macdonald Day?",o:["January 1","January 11","July 1","November 11"],a:1},
+{id:151,cat:"Canadian Symbols",d:3,q:"When is F\u00eate nationale (Quebec)?",o:["May 25","June 24","July 1","November 20"],a:1},
+{id:152,cat:"Canadian Symbols",d:3,q:"When was the Order of Canada established?",o:["1867","1921","1967","1982"],a:2},
+{id:153,cat:"Canadian Symbols",d:3,q:"What is the Clarkson Cup?",o:["Award for best PM","Trophy for women's hockey (established 2005)","A sailing prize","An art award"],a:1},
+// === ECONOMY ===
+{id:154,cat:"Economy",d:1,q:"Percentage in service industries?",o:["50%+","65%+","75%+","90%+"],a:2},
+{id:155,cat:"Economy",d:1,q:"Largest trading partner?",o:["China","UK","United States","Japan"],a:2},
+{id:156,cat:"Economy",d:2,q:"Three main industry types?",o:["Agriculture, manufacturing, tech","Service, manufacturing, natural resources","Finance, real estate, government","Mining, forestry, fishing"],a:1},
+{id:157,cat:"Economy",d:3,q:"Free trade with US enacted when?",o:["1980","1988","1994","2000"],a:1},
+{id:158,cat:"Economy",d:3,q:"Montreal Stock Exchange opened?",o:["1780","1832","1867","1900"],a:1},
+{id:159,cat:"Economy",d:2,q:"Canada-US bilateral trade is described as what?",o:["Moderate","The biggest in the world","The smallest among G8","Declining"],a:1},
+{id:160,cat:"Economy",d:2,q:"What percentage of Canadian exports go to the US?",o:["About 50%","About 65%","Over three-quarters","About 90%"],a:2},
+// === REGIONS & GEOGRAPHY ===
+{id:161,cat:"Regions & Geography",d:1,q:"Capital of Canada?",o:["Toronto","Montreal","Ottawa","Vancouver"],a:2},
+{id:162,cat:"Regions & Geography",d:1,q:"Provinces and territories count?",o:["10 and 2","10 and 3","12 and 3","8 and 5"],a:1},
+{id:163,cat:"Regions & Geography",d:1,q:"Atlantic Provinces?",o:["ON, QC, MB","NL, PEI, NS, NB","BC and AB","SK, MB, ON"],a:1},
+{id:164,cat:"Regions & Geography",d:1,q:"Smallest province?",o:["Nova Scotia","New Brunswick","Prince Edward Island","Newfoundland"],a:2},
+{id:165,cat:"Regions & Geography",d:1,q:"Prairie Provinces?",o:["ON, QC, NB","Manitoba, Saskatchewan, Alberta","BC, AB, SK","Yukon, NWT, Nunavut"],a:1},
+{id:166,cat:"Regions & Geography",d:2,q:"Largest freshwater lake in the world?",o:["Ontario","Huron","Erie","Superior"],a:3},
+{id:167,cat:"Regions & Geography",d:1,q:"Canada's largest city?",o:["Montreal","Vancouver","Ottawa","Toronto"],a:3},
+{id:168,cat:"Regions & Geography",d:2,q:"Highest mountain in Canada?",o:["Robson","Columbia","Mount Logan","Whistler"],a:2},
+{id:169,cat:"Regions & Geography",d:2,q:"Coldest recorded temperature (-63\u00b0C)?",o:["NWT","Nunavut","Yukon","Manitoba"],a:2},
+{id:170,cat:"Regions & Geography",d:2,q:"Nunavut's capital?",o:["Whitehorse","Yellowknife","Iqaluit","Dawson City"],a:2},
+{id:171,cat:"Regions & Geography",d:3,q:"'Nunavut' means?",o:["Cold land","Our land","Northern home","Great expanse"],a:1},
+{id:172,cat:"Regions & Geography",d:3,q:"Who chose Ottawa as capital?",o:["Macdonald 1867","Queen Victoria 1857","George V 1921","Fathers of Confederation 1864"],a:1},
+{id:173,cat:"Regions & Geography",d:2,q:"PEI is known as?",o:["Gateway to Canada","Diamond capital","Birthplace of Confederation","Breadbasket"],a:2},
+{id:174,cat:"Regions & Geography",d:2,q:"World's highest tides?",o:["BC","NL","Nova Scotia \u2014 Bay of Fundy","Quebec"],a:2},
+{id:175,cat:"Regions & Geography",d:3,q:"Saskatchewan's % of arable land?",o:["20%","30%","40%","50%"],a:2},
+{id:176,cat:"Regions & Geography",d:2,q:"RCMP training academy?",o:["Ottawa","Winnipeg","Regina","Edmonton"],a:2},
+{id:177,cat:"Regions & Geography",d:3,q:"Mackenzie River length?",o:["2,500 km","3,200 km","4,200 km","5,100 km"],a:2},
+{id:178,cat:"Regions & Geography",d:1,q:"Three oceans bordering Canada?",o:["Pacific, Atlantic, Indian","Pacific, Atlantic, Arctic","Atlantic, Arctic, Southern","Pacific, Arctic, Southern"],a:1},
+{id:179,cat:"Regions & Geography",d:1,q:"Canada's approximate population?",o:["~20M","~28M","~34M","~40M"],a:2},
+{id:180,cat:"Regions & Geography",d:3,q:"Banff National Park established?",o:["1867","1873","1885","1905"],a:2},
+{id:181,cat:"Regions & Geography",d:2,q:"Largest hydro-electricity producer?",o:["Ontario","BC","Quebec","Manitoba"],a:2},
+{id:182,cat:"Regions & Geography",d:2,q:"Largest naval base?",o:["Vancouver","Victoria","Halifax","St. John's"],a:2},
+{id:183,cat:"Regions & Geography",d:3,q:"NL joined Canada when?",o:["1867","1905","1949","1999"],a:2},
+{id:184,cat:"Regions & Geography",d:2,q:"Name the five Great Lakes.",o:["Ontario, Erie, Huron, Michigan, Superior","Ontario, Erie, Huron, Winnipeg, Superior","Ontario, Erie, Simcoe, Michigan, Superior","Ontario, Erie, Huron, Michigan, Athabasca"],a:0},
+{id:185,cat:"Regions & Geography",d:2,q:"What is the capital of Quebec?",o:["Montreal","Quebec City","Gatineau","Sherbrooke"],a:1},
+{id:186,cat:"Regions & Geography",d:2,q:"What is the capital of Alberta?",o:["Calgary","Edmonton","Red Deer","Lethbridge"],a:1},
+{id:187,cat:"Regions & Geography",d:2,q:"What is the capital of British Columbia?",o:["Vancouver","Victoria","Kelowna","Nanaimo"],a:1},
+{id:188,cat:"Regions & Geography",d:2,q:"What is the capital of Manitoba?",o:["Brandon","Winnipeg","Thompson","Churchill"],a:1},
+{id:189,cat:"Regions & Geography",d:3,q:"How large is the National Capital Region surrounding Ottawa?",o:["1,200 km\u00b2","2,500 km\u00b2","4,700 km\u00b2","8,000 km\u00b2"],a:2},
+{id:190,cat:"Regions & Geography",d:3,q:"What is Yellowknife called?",o:["Gateway to the North","Diamond capital of North America","Gold capital","Arctic capital"],a:1},
+{id:191,cat:"Regions & Geography",d:2,q:"What is the Confederation Bridge?",o:["Bridge connecting Quebec and Ontario","One of the longest bridges connecting NB and PEI","A bridge over the St. Lawrence","A bridge in Vancouver"],a:1}
+];
+var CATS=[...new Set(QUESTIONS.map(function(q){return q.cat;}))];
+var TS=20,PP=75,TT=1800;
+var DL={1:"Easy",2:"Medium",3:"Hard"};
+var DC={1:"#2E7D32",2:"#E65100",3:"#B71C1C"};
 
-const CATS=[...new Set(QUESTIONS.map(q=>q.cat))];
-const TS=20,PP=75,TT=1800;
-const DL={1:"Easy",2:"Medium",3:"Hard"};
-const DC={1:"#2E7D32",2:"#E65100",3:"#B71C1C"};
-
-function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+function shuffle(a){var b=a.slice();for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}return b;}
 function $(s,p){return(p||document).querySelector(s);}
-function h(tag,cls,inner){const e=document.createElement(tag);if(cls)e.className=cls;if(inner)e.innerHTML=inner;return e;}
+function h(tag,cls,inner){var e=document.createElement(tag);if(cls)e.className=cls;if(inner)e.innerHTML=inner;return e;}
 
-let S={scr:"home",qs:[],isT:false,idx:0,ans:{},rev:false,tl:TT,res:null,stats:[],diff:0,revTopic:null,openSec:0};
-let tmr=null;
+var S={scr:"home",qs:[],isT:false,idx:0,ans:{},rev:false,tl:TT,res:null,stats:[],diff:0,revTopic:null,openSec:0};
+var tmr=null;
 
-function loadStats(){try{const s=localStorage.getItem("ctz-stats");if(s)S.stats=JSON.parse(s);}catch{}}
-function saveStats(){try{localStorage.setItem("ctz-stats",JSON.stringify(S.stats));}catch{}}
+function loadStats(){try{var s=localStorage.getItem("ctz-stats");if(s)S.stats=JSON.parse(s);}catch(e){}}
+function saveStats(){try{localStorage.setItem("ctz-stats",JSON.stringify(S.stats));}catch(e){}}
 function stopTimer(){if(tmr){clearInterval(tmr);tmr=null;}}
-function startTimer(){stopTimer();tmr=setInterval(()=>{S.tl--;if(S.tl<=0){stopTimer();finishQuiz();}else renderQuiz($("#app"));},1000);}
-
+function startTimer(){stopTimer();tmr=setInterval(function(){S.tl--;if(S.tl<=0){stopTimer();finishQuiz();}else renderQuiz($("#app"));},1000);}
 function go(scr){S.scr=scr;render();}
-function render(){const app=$("#app");app.innerHTML="";stopTimer();
-  if(S.scr==="home")renderHome(app);
-  else if(S.scr==="study-pick")renderPicker(app,true);
-  else if(S.scr==="rev-pick")renderPicker(app,false);
-  else if(S.scr==="revision")renderRevision(app);
-  else if(S.scr==="quiz"){renderQuiz(app);if(S.isT)startTimer();}
-  else if(S.scr==="results")renderResults(app);
-}
+
+function render(){var app=$("#app");app.innerHTML="";stopTimer();
+if(S.scr==="home")renderHome(app);
+else if(S.scr==="study-pick")renderPicker(app,true);
+else if(S.scr==="rev-pick")renderPicker(app,false);
+else if(S.scr==="revision")renderRevision(app);
+else if(S.scr==="quiz"){renderQuiz(app);if(S.isT)startTimer();}
+else if(S.scr==="results")renderResults(app);}
 
 function renderHome(app){
-  const tot=S.stats.length,p=S.stats.filter(s=>s.passed).length,avg=tot?Math.round(S.stats.reduce((a,s)=>a+s.score,0)/tot):0;
-  const d=document.createElement("div");d.className="start";
-  d.innerHTML='<div class="hero"><div class="maple-bg"></div><h1>Discover Canada</h1><p class="sub">Citizenship Test Simulator</p><p class="desc">'+QUESTIONS.length+' questions \u00b7 '+CATS.length+' topics \u00b7 3 difficulty levels</p></div><div id="modes" class="modes"></div>'+(tot>0?'<div class="sbar"><div class="st"><span class="sn">'+tot+'</span><span class="sl">Tests</span></div><div class="st"><span class="sn">'+p+'/'+tot+'</span><span class="sl">Passed</span></div><div class="st"><span class="sn">'+avg+'%</span><span class="sl">Avg</span></div></div>':'');
-  app.appendChild(d);
-  const m=$("#modes",d);
-  [{i:"\ud83d\udcdd",t:"Test Mode",ds:TS+" questions \u00b7 30 min \u00b7 75% to pass",c:"",fn:function(){S.qs=shuffle(QUESTIONS).slice(0,TS);S.isT=true;S.idx=0;S.ans={};S.rev=false;S.tl=TT;go("quiz");}},
-   {i:"\ud83d\udcd6",t:"Study Mode",ds:"Practice by category & difficulty",c:"",fn:function(){S.diff=0;go("study-pick");}},
-   {i:"\ud83d\udd0d",t:"Revision Mode",ds:"Topic summaries from the guide",c:" rev",fn:function(){go("rev-pick");}}
-  ].forEach(function(b){var btn=h("button","mcard"+b.c,'<span class="mi">'+b.i+'</span><div><span class="mt">'+b.t+'</span><span class="md">'+b.ds+'</span></div>');btn.onclick=b.fn;m.appendChild(btn);});
-}
+var tot=S.stats.length,p=S.stats.filter(function(s){return s.passed;}).length,avg=tot?Math.round(S.stats.reduce(function(a,s){return a+s.score;},0)/tot):0;
+var d=document.createElement("div");d.className="start";
+d.innerHTML='<div class="hero"><div class="maple-bg"></div><h1>Discover Canada</h1><p class="sub">Citizenship Test Simulator</p><p class="desc">'+QUESTIONS.length+' questions \u00b7 '+CATS.length+' topics \u00b7 3 difficulty levels</p></div><div id="modes" class="modes"></div>'+(tot>0?'<div class="sbar"><div class="st"><span class="sn">'+tot+'</span><span class="sl">Tests</span></div><div class="st"><span class="sn">'+p+'/'+tot+'</span><span class="sl">Passed</span></div><div class="st"><span class="sn">'+avg+'%</span><span class="sl">Avg</span></div></div>':'');
+app.appendChild(d);var m=$("#modes",d);
+[{i:"\ud83d\udcdd",t:"Test Mode",ds:TS+" questions \u00b7 30 min \u00b7 75% to pass",c:"",fn:function(){S.qs=shuffle(QUESTIONS).slice(0,TS);S.isT=true;S.idx=0;S.ans={};S.rev=false;S.tl=TT;go("quiz");}},{i:"\ud83d\udcd6",t:"Study Mode",ds:"Practice by category & difficulty",c:"",fn:function(){S.diff=0;go("study-pick");}},{i:"\ud83d\udd0d",t:"Revision Mode",ds:"Topic summaries from the guide",c:" rev",fn:function(){go("rev-pick");}}].forEach(function(b){var btn=h("button","mcard"+b.c,'<span class="mi">'+b.i+'</span><div><span class="mt">'+b.t+'</span><span class="md">'+b.ds+'</span></div>');btn.onclick=b.fn;m.appendChild(btn);});}
 
 function renderPicker(app,forStudy){
-  var d=h("div","picker");
-  d.innerHTML='<button class="back" id="pb">\u2190 Back</button><h2>'+(forStudy?"Study: Choose Category":"Revision: Choose Topic")+'</h2>'+(forStudy?'<div class="diff-row" id="drow"></div>':'')+'<div class="cgrid" id="cg"></div>';
-  app.appendChild(d);
-  $("#pb",d).onclick=function(){go("home");};
+var d=h("div","picker");
+d.innerHTML='<button class="back" id="pb">\u2190 Back</button><h2>'+(forStudy?"Study: Choose Category":"Revision: Choose Topic")+'</h2>'+(forStudy?'<div class="diff-row" id="drow"></div>':'')+'<div class="cgrid" id="cg"></div>';
+app.appendChild(d);
+$("#pb",d).onclick=function(){go("home");};
+if(forStudy){var dr=$("#drow",d);[0,1,2,3].forEach(function(dv){var b=h("button","dbtn"+(S.diff===dv?" active":""),dv?DL[dv]:"All Levels");if(dv){if(S.diff===dv)b.style.cssText="border-color:"+DC[dv]+";color:#fff;background:"+DC[dv];else b.style.cssText="border-color:"+DC[dv]+";color:"+DC[dv]+";background:transparent";}else{if(S.diff===0)b.style.cssText="border-color:#1A2744;color:#fff;background:#1A2744";else b.style.cssText="border-color:#E7E5E4;color:#78716C;background:transparent";}b.onclick=function(){S.diff=dv;render();};dr.appendChild(b);});}
+var cg=$("#cg",d);
+if(forStudy){var cnt=S.diff?QUESTIONS.filter(function(q){return q.d===S.diff;}).length:QUESTIONS.length;var ab=h("button","cc all",'<span class="cn">'+cnt+'</span>All Categories');ab.onclick=function(){var pool=S.diff?QUESTIONS.filter(function(q){return q.d===S.diff;}):QUESTIONS;if(!pool.length){alert("No questions for this level.");return;}S.qs=shuffle(pool);S.isT=false;S.idx=0;S.ans={};S.rev=false;go("quiz");};cg.appendChild(ab);}
+var list=forStudy?CATS:SUMMARIES.map(function(s){return s.topic;});
+list.forEach(function(cat){var count=forStudy?QUESTIONS.filter(function(q){return q.cat===cat&&(!S.diff||q.d===S.diff);}).length:(SUMMARIES.find(function(s){return s.topic===cat;})||{sections:[]}).sections.length;var icon=(SUMMARIES.find(function(s){return s.topic===cat;})||{icon:"\ud83d\udcd8"}).icon;var b=h("button","cc",'<span class="ci">'+icon+'</span><span class="cn">'+count+'</span>'+cat);b.onclick=function(){if(forStudy){var pool=QUESTIONS.filter(function(q){return q.cat===cat;});if(S.diff)pool=pool.filter(function(q){return q.d===S.diff;});if(!pool.length){alert("No questions for this combination.");return;}S.qs=shuffle(pool);S.isT=false;S.idx=0;S.ans={};S.rev=false;go("quiz");}else{S.revTopic=cat;S.openSec=0;go("revision");}};cg.appendChild(b);});}
 
-  if(forStudy){
-    var dr=$("#drow",d);
-    [0,1,2,3].forEach(function(dv){
-      var b=h("button","dbtn"+(S.diff===dv?" active":""),dv?DL[dv]:"All Levels");
-      // FIX: Apply inline styles for ALL buttons including "All Levels"
-      if(dv){
-        if(S.diff===dv) b.style.cssText="border-color:"+DC[dv]+";color:#fff;background:"+DC[dv];
-        else b.style.cssText="border-color:"+DC[dv]+";color:"+DC[dv]+";background:transparent";
-      } else {
-        // "All Levels" button
-        if(S.diff===0) b.style.cssText="border-color:#1A2744;color:#fff;background:#1A2744";
-        else b.style.cssText="border-color:#E7E5E4;color:#78716C;background:transparent";
-      }
-      b.onclick=function(){S.diff=dv;render();};
-      dr.appendChild(b);
-    });
-  }
+function renderRevision(app){var data=SUMMARIES.find(function(s){return s.topic===S.revTopic;});if(!data)return;var d=h("div","revision");d.innerHTML='<button class="back" id="rb">\u2190 Back to Topics</button><h2>'+data.icon+' '+data.topic+'</h2><div class="sections" id="secs"></div>';app.appendChild(d);$("#rb",d).onclick=function(){go("rev-pick");};var secs=$("#secs",d);data.sections.forEach(function(sec,i){var s=h("div","sec"+(S.openSec===i?" open":""));s.innerHTML='<button class="sec-head"><span>'+sec.title+'</span><span class="chev">'+(S.openSec===i?"\u25b2":"\u25bc")+'</span></button>'+(S.openSec===i?'<div class="sec-body">'+sec.text+'</div>':'');s.querySelector(".sec-head").onclick=function(){S.openSec=(S.openSec===i?null:i);render();};secs.appendChild(s);});}
 
-  var cg=$("#cg",d);
-  if(forStudy){
-    var cnt=S.diff?QUESTIONS.filter(function(q){return q.d===S.diff;}).length:QUESTIONS.length;
-    var ab=h("button","cc all",'<span class="cn">'+cnt+'</span>All Categories');
-    ab.onclick=function(){var pool=S.diff?QUESTIONS.filter(function(q){return q.d===S.diff;}):QUESTIONS;if(!pool.length){alert("No questions for this level.");return;}S.qs=shuffle(pool);S.isT=false;S.idx=0;S.ans={};S.rev=false;go("quiz");};
-    cg.appendChild(ab);
-  }
+function renderQuiz(app){var q=S.qs[S.idx],sel=S.ans[q.id],isLast=(S.idx===S.qs.length-1);var prog=((S.idx+1)/S.qs.length*100);var m=Math.floor(S.tl/60),s=S.tl%60;
+app.innerHTML='<div class="quiz"><div class="qh"><button class="back" id="qb">\u2715</button><div class="pi"><span>'+(S.idx+1)+'/'+S.qs.length+'</span>'+(S.isT?'<span class="timer'+(S.tl<300?" urg":"")+'">'+String(m).padStart(2,"0")+':'+String(s).padStart(2,"0")+'</span>':'')+'</div><span class="dtag" style="background:'+DC[q.d]+'">'+DL[q.d]+'</span></div><div class="pbar"><div class="pfill" style="width:'+prog+'%"></div></div><div class="qa"><span class="ctag">'+q.cat+'</span><h3 class="qt">'+q.q+'</h3><div class="opts" id="opts"></div>'+(!S.isT&&S.rev?'<div class="expl">\u2713 Correct: '+String.fromCharCode(65+q.a)+'</div>':'')+'</div><div class="qf"><button class="nb" id="prev"'+(S.idx===0?' disabled':'')+' >\u2190 Prev</button>'+(S.isT&&isLast?'<button class="nb fin" id="nxt">Submit Test</button>':'<button class="nb nx" id="nxt"'+(!S.isT&&!S.rev?' disabled':'')+'>'+(isLast?"Finish":"Next \u2192")+'</button>')+'</div></div>';
+var opts=$("#opts",app);q.o.forEach(function(o,i){var c="opt";if(sel===i)c+=" sel";if(!S.isT&&S.rev){if(i===q.a)c+=" ok";else if(sel===i)c+=" no";}var btn=h("button",c,'<span class="ol">'+String.fromCharCode(65+i)+'</span><span class="ot">'+o+'</span>');btn.onclick=function(){if(!S.isT&&S.rev)return;S.ans[q.id]=i;if(!S.isT)S.rev=true;renderQuiz(app);};opts.appendChild(btn);});
+$("#qb",app).onclick=function(){if(S.isT){if(!confirm("Quit the test? Your progress will be lost."))return;}stopTimer();S.scr="home";render();};
+$("#prev",app).onclick=function(){if(S.idx>0){S.idx--;S.rev=false;renderQuiz(app);}};
+$("#nxt",app).onclick=function(){if(isLast){finishQuiz();}else{S.idx++;S.rev=false;renderQuiz(app);}};}
 
-  var list=forStudy?CATS:SUMMARIES.map(function(s){return s.topic;});
-  list.forEach(function(cat){
-    var count=forStudy?QUESTIONS.filter(function(q){return q.cat===cat&&(!S.diff||q.d===S.diff);}).length:(SUMMARIES.find(function(s){return s.topic===cat;})||{sections:[]}).sections.length;
-    var icon=(SUMMARIES.find(function(s){return s.topic===cat;})||{icon:"\ud83d\udcd8"}).icon;
-    var b=h("button","cc",'<span class="ci">'+icon+'</span><span class="cn">'+count+'</span>'+cat);
-    b.onclick=function(){
-      if(forStudy){var pool=QUESTIONS.filter(function(q){return q.cat===cat;});if(S.diff)pool=pool.filter(function(q){return q.d===S.diff;});if(!pool.length){alert("No questions for this combination.");return;}S.qs=shuffle(pool);S.isT=false;S.idx=0;S.ans={};S.rev=false;go("quiz");}
-      else{S.revTopic=cat;S.openSec=0;go("revision");}
-    };
-    cg.appendChild(b);
-  });
-}
+function finishQuiz(){stopTimer();var correct=S.qs.filter(function(q){return S.ans[q.id]===q.a;}).length;S.res={correct:correct,total:S.qs.length,ans:Object.assign({},S.ans),questions:S.qs.slice()};if(S.isT){var p=Math.round((correct/S.qs.length)*100);S.stats.push({score:p,passed:p>=PP,date:new Date().toISOString()});saveStats();}go("results");}
 
-function renderRevision(app){
-  var data=SUMMARIES.find(function(s){return s.topic===S.revTopic;});if(!data)return;
-  var d=h("div","revision");
-  d.innerHTML='<button class="back" id="rb">\u2190 Back to Topics</button><h2>'+data.icon+' '+data.topic+'</h2><div class="sections" id="secs"></div>';
-  app.appendChild(d);
-  $("#rb",d).onclick=function(){go("rev-pick");};
-  var secs=$("#secs",d);
-  data.sections.forEach(function(sec,i){
-    var s=h("div","sec"+(S.openSec===i?" open":""));
-    s.innerHTML='<button class="sec-head"><span>'+sec.title+'</span><span class="chev">'+(S.openSec===i?"\u25b2":"\u25bc")+'</span></button>'+(S.openSec===i?'<div class="sec-body">'+sec.text+'</div>':'');
-    s.querySelector(".sec-head").onclick=function(){S.openSec=(S.openSec===i?null:i);render();};
-    secs.appendChild(s);
-  });
-}
+function renderResults(app){var R=S.res,pct=Math.round((R.correct/R.total)*100),passed=pct>=PP;var cats={};R.questions.forEach(function(q){if(!cats[q.cat])cats[q.cat]={c:0,t:0};cats[q.cat].t++;if(R.ans[q.id]===q.a)cats[q.cat].c++;});var wrong=R.questions.filter(function(q){return R.ans[q.id]!==q.a;});var catH="";Object.keys(cats).forEach(function(cat){var d=cats[cat],p=Math.round((d.c/d.t)*100);catH+='<div class="cr"><span class="cname">'+cat+'</span><div class="cbg"><div class="cfill '+(p>=PP?"g":"w")+'" style="width:'+p+'%"></div></div><span class="cpct">'+d.c+'/'+d.t+'</span></div>';});var revH="";wrong.forEach(function(q){revH+='<div class="rc"><span class="ddot" style="background:'+DC[q.d]+'"></span><p class="rq">'+q.q+'</p>'+(R.ans[q.id]!==undefined?'<p class="ry">Yours: <strong>'+q.o[R.ans[q.id]]+'</strong></p>':'<p class="ry un">Not answered</p>')+'<p class="rok">Correct: <strong>'+q.o[q.a]+'</strong></p></div>';});
+app.innerHTML='<div class="res"><div class="rh '+(passed?"pass":"fail")+'"><div class="rs">'+pct+'%</div><div class="rv">'+(S.isT?(passed?"PASSED":"NOT YET"):"COMPLETE")+'</div><div class="rd">'+R.correct+'/'+R.total+' correct'+(S.isT?' \u00b7 '+PP+'% required':'')+'</div></div><div class="cb"><h3>By Category</h3>'+catH+'</div>'+(wrong.length>0?'<div class="rr"><h3>Review ('+wrong.length+')</h3>'+revH+'</div>':'<div class="perf">\ud83c\udf89 Perfect score!</div>')+'<div class="ra"><button class="ab" id="retry">Try Again</button><button class="ab sec" id="rhome">Home</button></div></div>';
+$("#retry",app).onclick=function(){if(S.isT){S.qs=shuffle(QUESTIONS).slice(0,TS);S.isT=true;S.idx=0;S.ans={};S.rev=false;S.tl=TT;go("quiz");}else go("study-pick");};
+$("#rhome",app).onclick=function(){go("home");};}
 
-function renderQuiz(app){
-  // Don't clear timer on re-render within quiz
-  var q=S.qs[S.idx],sel=S.ans[q.id],isLast=(S.idx===S.qs.length-1);
-  var prog=((S.idx+1)/S.qs.length*100);
-  var m=Math.floor(S.tl/60),s=S.tl%60;
-  app.innerHTML='<div class="quiz">'+
-    '<div class="qh"><button class="back" id="qb">\u2715</button><div class="pi"><span>'+(S.idx+1)+'/'+S.qs.length+'</span>'+(S.isT?'<span class="timer'+(S.tl<300?" urg":"")+'">'+String(m).padStart(2,"0")+':'+String(s).padStart(2,"0")+'</span>':'')+'</div><span class="dtag" style="background:'+DC[q.d]+'">'+DL[q.d]+'</span></div>'+
-    '<div class="pbar"><div class="pfill" style="width:'+prog+'%"></div></div>'+
-    '<div class="qa"><span class="ctag">'+q.cat+'</span><h3 class="qt">'+q.q+'</h3><div class="opts" id="opts"></div>'+(!S.isT&&S.rev?'<div class="expl">\u2713 Correct: '+String.fromCharCode(65+q.a)+'</div>':'')+'</div>'+
-    '<div class="qf"><button class="nb" id="prev"'+(S.idx===0?' disabled':'')+' >\u2190 Prev</button>'+(S.isT&&isLast?'<button class="nb fin" id="nxt">Submit Test</button>':'<button class="nb nx" id="nxt"'+(!S.isT&&!S.rev?' disabled':'')+'>'+(isLast?"Finish":"Next \u2192")+'</button>')+'</div>'+
-  '</div>';
-
-  var opts=$("#opts",app);
-  q.o.forEach(function(o,i){
-    var c="opt";
-    if(sel===i)c+=" sel";
-    if(!S.isT&&S.rev){if(i===q.a)c+=" ok";else if(sel===i)c+=" no";}
-    var btn=h("button",c,'<span class="ol">'+String.fromCharCode(65+i)+'</span><span class="ot">'+o+'</span>');
-    btn.onclick=function(){
-      // FIX: In test mode, ALLOW changing answer (no lock)
-      if(!S.isT&&S.rev)return; // study mode: locked after reveal
-      S.ans[q.id]=i;
-      if(!S.isT)S.rev=true;
-      renderQuiz(app); // re-render quiz without restarting timer
-    };
-    opts.appendChild(btn);
-  });
-
-  // FIX: Back button always works, with confirm on test mode
-  $("#qb",app).onclick=function(){
-    if(S.isT){
-      if(!confirm("Quit the test? Your progress will be lost."))return;
-    }
-    stopTimer();
-    S.scr="home";
-    render();
-  };
-  $("#prev",app).onclick=function(){if(S.idx>0){S.idx--;S.rev=false;renderQuiz(app);}};
-  $("#nxt",app).onclick=function(){if(isLast){finishQuiz();}else{S.idx++;S.rev=false;renderQuiz(app);}};
-}
-
-function finishQuiz(){
-  stopTimer();
-  var correct=S.qs.filter(function(q){return S.ans[q.id]===q.a;}).length;
-  S.res={correct:correct,total:S.qs.length,ans:Object.assign({},S.ans),questions:S.qs.slice()};
-  if(S.isT){var p=Math.round((correct/S.qs.length)*100);S.stats.push({score:p,passed:p>=PP,date:new Date().toISOString()});saveStats();}
-  go("results");
-}
-
-function renderResults(app){
-  var R=S.res,pct=Math.round((R.correct/R.total)*100),passed=pct>=PP;
-  var cats={};R.questions.forEach(function(q){if(!cats[q.cat])cats[q.cat]={c:0,t:0};cats[q.cat].t++;if(R.ans[q.id]===q.a)cats[q.cat].c++;});
-  var wrong=R.questions.filter(function(q){return R.ans[q.id]!==q.a;});
-  var catH="";Object.keys(cats).forEach(function(cat){var d=cats[cat],p=Math.round((d.c/d.t)*100);catH+='<div class="cr"><span class="cname">'+cat+'</span><div class="cbg"><div class="cfill '+(p>=PP?"g":"w")+'" style="width:'+p+'%"></div></div><span class="cpct">'+d.c+'/'+d.t+'</span></div>';});
-  var revH="";wrong.forEach(function(q){revH+='<div class="rc"><span class="ddot" style="background:'+DC[q.d]+'"></span><p class="rq">'+q.q+'</p>'+(R.ans[q.id]!==undefined?'<p class="ry">Yours: <strong>'+q.o[R.ans[q.id]]+'</strong></p>':'<p class="ry un">Not answered</p>')+'<p class="rok">Correct: <strong>'+q.o[q.a]+'</strong></p></div>';});
-
-  app.innerHTML='<div class="res">'+
-    '<div class="rh '+(passed?"pass":"fail")+'"><div class="rs">'+pct+'%</div><div class="rv">'+(S.isT?(passed?"PASSED":"NOT YET"):"COMPLETE")+'</div><div class="rd">'+R.correct+'/'+R.total+' correct'+(S.isT?' \u00b7 '+PP+'% required':'')+'</div></div>'+
-    '<div class="cb"><h3>By Category</h3>'+catH+'</div>'+
-    (wrong.length>0?'<div class="rr"><h3>Review ('+wrong.length+')</h3>'+revH+'</div>':'<div class="perf">\ud83c\udf89 Perfect score!</div>')+
-    '<div class="ra"><button class="ab" id="retry">Try Again</button><button class="ab sec" id="rhome">Home</button></div></div>';
-
-  $("#retry",app).onclick=function(){
-    if(S.isT){S.qs=shuffle(QUESTIONS).slice(0,TS);S.isT=true;S.idx=0;S.ans={};S.rev=false;S.tl=TT;go("quiz");}
-    else go("study-pick");
-  };
-  $("#rhome",app).onclick=function(){go("home");};
-}
-
-loadStats();
-render();
-
+loadStats();render();
 </script>
 </body>
 </html>
